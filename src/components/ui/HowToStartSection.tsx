@@ -9,7 +9,7 @@ export default function HowToStartSection() {
             SectionTitle="How To Start ?"
             SectionSubTitle="it has never been easier"
             />
-            <div className=" grid grid-cols-3 gap-10 w-full">
+            <div className=" grid lg:grid-cols-3 grid-cols-1 gap-10 w-full">
                 {
                     HowToStartSteps.map(step =>{
                         return(
