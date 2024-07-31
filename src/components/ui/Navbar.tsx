@@ -1,12 +1,14 @@
 import { NavLinks } from "@/lib/data"
 import Link from "next/link"
 import { Button } from "./button"
+import Image from "next/image"
+import imgsrc from "../../../public/NoteWise-logo.svg"
 export default function Navbar() {
   return (
     <header className=' fixed top-0 w-full z-50 p-3 bg-Bgwhite/70 backdrop-blur border-b border-b-LightPurple/10'>
       <div className=' container mx-auto flex justify-between items-center'>
         <div className=" flex justify-center items-center">
-          <Link href="/" className=" text-3xl font-bold text-DarkPurple pr-5"> <span className="text-Purple700">N</span>oteWise</Link>
+          <Link href="/" className=" text-3xl font-bold text-DarkPurple pr-5"> <Image src={imgsrc} alt="NoteWise Logo" /> </Link>
           <ul className=" hidden lg:flex">
           {
             NavLinks.map((link,i)=>{
@@ -17,7 +19,7 @@ export default function Navbar() {
           }
           </ul>
         </div>
-        <Button className=" hidden lg:block"><Link href="/login" className=" text-sm font-semibold">Get Started for Free</Link></Button>
+        <Button><Link href="/login" className=" text-sm font-medium">Get Started for Free</Link></Button>
       </div>
     </header>
   )
