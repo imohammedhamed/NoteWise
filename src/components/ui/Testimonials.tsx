@@ -15,8 +15,8 @@ export default function Testimonials() {
                     testimonials.map(item => {
                         return(
                             <div key={item.id} className={` container  border border-solid border-LightPurple rounded-xl p-4 bg-${item.Color}`}>
-                                <h3 className=" pb-2 text-LightPurple text-sm font-semibold">{item.Title}</h3>
-                                <p className=" text-DarkPurple text-base ">{item.Body}</p>
+                                <h3 className="pb-2 text-LightPurple text-sm font-semibold">{item.Title}</h3>
+                                <p className="text-DarkPurple text-base ">{item.Body}</p>
                             </div>
                         )
                     })
