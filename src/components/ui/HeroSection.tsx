@@ -1,12 +1,17 @@
+"use client"
 import { Button } from "./button"
 import Link from "next/link"
 import MaxWContainer from "./MaxWContainer"
-import { ContainerScroll } from "./container-scroll-animation";
 import Image from "next/image"
 import heroImg from "../../../public/UserDashboard-Note.svg"
+import { motion } from "framer-motion";
 export default function HeroSection() {
   return (
-    <section className=" mt-40 flex justify-center items-center w-full">
+    <motion.section 
+    initial={{y:10,opacity:0}}
+    whileInView={{y:0,opacity:1}}
+    transition={{ease:"linear",delay:0.2}}
+    className=" mt-40 flex justify-center items-center w-full">
         <MaxWContainer className="*:text-center relative px-4">
         <h1 className=" lg:text-5xl text-2xl font-semibold pb-5">Take Notes to the Next Level with <br /> <span className=" border-b-[5px] border-Purple700">AI-Powered</span> Conversations</h1>
         <p className=" lg:text-xl text-base font-medium">Interact with Your Notes Like Never Before. <br /> Organize, Discuss, and Enhance Your Ideas Seamlessly.</p>
@@ -17,6 +22,6 @@ export default function HeroSection() {
         </span>
         <Image src={heroImg} alt="hero img" priority quality={100} className=" p-5 rounded-xl bg-DarkPurple/10 backdrop-blur-xl "/>
         </MaxWContainer>
-    </section>
+    </motion.section>
   )
 }
