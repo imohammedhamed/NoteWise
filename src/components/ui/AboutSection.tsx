@@ -1,9 +1,10 @@
 import MaxWContainer from "./MaxWContainer"
 import SectionHeading from "./SectionHeading"
 import { aboutCard } from "@/lib/data"
+import Section from "./Section"
 export default function AboutSection() {
   return (
-    <section id="about">
+        <Section sectionId="about">
         <MaxWContainer>
             <SectionHeading
             SectionTitle = "About Us"
@@ -13,7 +14,7 @@ export default function AboutSection() {
                 {
                     aboutCard.map(item =>{
                         return(
-                            <div key={item.id} className="container">
+                            <div key={item.id} className="container flex justify-center items-center">
                                 <div className=" p-4 bg-Purple50 border border-solid border-LightPurple rounded-xl lg:h-32 h-max">
                                     <h3 className=" pb-2 text-lg text-DarkPurple font-semibold ">{item.Title}</h3>
                                     <p className=" text-base text-DarkPurple/50 font-medium">{item.Body}</p>
@@ -24,6 +25,6 @@ export default function AboutSection() {
                 }
             </div>
         </MaxWContainer>
-    </section>
+        </Section>
   )
 }
