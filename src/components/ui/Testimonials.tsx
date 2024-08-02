@@ -10,11 +10,11 @@ export default function Testimonials() {
             SectionTitle = "Testimonials"
             SectionSubTitle="What our users have been saying."
             />
-            <div className=" grid lg:grid-cols-3 grid-cols-1 gap-5">
+            <div className=" container lg:grid lg:grid-cols-3 flex overflow-x-auto  gap-5">
                 {
                     testimonials.map(item => {
                         return(
-                            <div key={item.id} className={` container  border border-solid border-LightPurple rounded-xl p-4 bg-${item.Color}`}>
+                            <div key={item.id} className={` lg:w-96 flex flex-col flex-shrink-0 w-80 border border-solid border-LightPurple rounded-xl p-4 bg-${item.Color}`}>
                                 <h3 className="pb-2 text-LightPurple text-sm font-semibold">{item.Title}</h3>
                                 <p className="text-DarkPurple text-base ">{item.Body}</p>
                             </div>
