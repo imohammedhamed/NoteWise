@@ -28,7 +28,7 @@ export default function Section({sectionId,children,className}:SectionProps) {
     animate={controls}
     transition={{ease:"linear",delay:0.2}}
      id={sectionId} 
-     className={cn("py-20",className)}
+     className={cn("lg:py-20 py-10",className)}
      >
         {children}
      </motion.section>

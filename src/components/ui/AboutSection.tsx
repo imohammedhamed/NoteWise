@@ -14,8 +14,8 @@ export default function AboutSection() {
                 {
                     aboutCard.map(item =>{
                         return(
-                            <div key={item.id} className="container flex justify-center items-center">
-                                <div className=" p-4 bg-Purple50 border border-solid border-LightPurple rounded-xl lg:h-32 h-max">
+                            <div key={item.id} className=" container flex justify-center items-center">
+                                <div className=" p-4 bg-Purple50 border border-solid border-LightPurple rounded-xl lg:w-11/12 lg:h-32 h-max">
                                     <h3 className=" pb-2 text-lg text-DarkPurple font-semibold ">{item.Title}</h3>
                                     <p className=" text-base text-DarkPurple/50 font-medium">{item.Body}</p>
                                 </div>
