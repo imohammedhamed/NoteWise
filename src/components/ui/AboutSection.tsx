@@ -19,7 +19,7 @@ export default function AboutSection() {
                                     <h3 className=" pb-2 text-lg text-DarkPurple font-semibold ">{item.Title}</h3>
                                     <p className=" text-base text-DarkPurple/50 font-medium">{item.Body}</p>
                                 </div>
-                            </div>
+                            </div> 
                         )
                     })
                 }

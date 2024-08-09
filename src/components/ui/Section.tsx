@@ -10,7 +10,7 @@ interface SectionProps{
     children: React.ReactNode,
 }
 export default function Section({sectionId,children,className}:SectionProps) {
-        const controls = useAnimation();
+    const controls = useAnimation();
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.3,
