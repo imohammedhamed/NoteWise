@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+import { cn } from "../../lib/utils"
 interface MaxWContainerProps {
     children: React.ReactNode;
     className?:string

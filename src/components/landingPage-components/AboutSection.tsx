@@ -1,7 +1,7 @@
-import MaxWContainer from "./MaxWContainer"
+import MaxWContainer from "../ui/MaxWContainer"
 import SectionHeading from "./SectionHeading"
-import { aboutCard } from "@/lib/data"
-import Section from "./Section"
+import { aboutCard } from "../../lib/data"
+import Section from "../ui/Section"
 export default function AboutSection() {
   return (
         <Section sectionId="about">

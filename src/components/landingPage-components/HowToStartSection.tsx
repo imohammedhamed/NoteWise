@@ -1,7 +1,8 @@
-import { HowToStartSteps } from "@/lib/data"
+"use client";
+import { HowToStartSteps } from "../../lib/data"
 import SectionHeading from "./SectionHeading"
-import MaxWContainer from "./MaxWContainer"
-import Section from "./Section";
+import MaxWContainer from "../ui/MaxWContainer"
+import Section from "../ui/Section";
 
 export default function HowToStartSection() {
   return (
