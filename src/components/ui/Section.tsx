@@ -1,5 +1,5 @@
 "use client"
-import { cn } from "@/lib/utils"
+import { cn } from "../../lib/utils"
 import { motion, useAnimation } from "framer-motion"
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";

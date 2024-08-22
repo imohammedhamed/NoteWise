@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 import { Toaster, toast } from 'sonner'
 
 const lato = Lato({
@@ -21,9 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(' bg-Bgwhite text-DarkPurple h-full',lato.className)}>
+      <body className={cn(' bg-Bgwhite text-DarkPurple flex flex-col min-h-screen',lato.className)}>
       <Toaster position="top-center" />
+      <main>
         {children}
+      </main>
       </body>
     </html>
   );

@@ -19,6 +19,7 @@ const config = {
       Purple300:"#d8b4fe",
       Purple600:"#9333ea",
       Purple700:"#7e22ce",
+      Red700:"#b91c1c",
       Gray400:"#9ca3af",
       Bgwhite:"rgb(255 255 255)",
       border: "hsl(var(--border))",
@@ -50,8 +51,11 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
-  },
-  plugins: [require("tailwindcss-animate")],
+  },    
+  plugins: [
+    require('daisyui'),
+    // require('tailwindcss-animate'),
+  ],
 } satisfies Config
 
 export default config

@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String   @unique
+  password  String
+  picture   String?
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+}
+
+model Note {
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
+  title        String?
+  body         String?
+  favorite     Boolean?
+  createdAt    DateTime    @default(now()) @map("created_at")
+  updatedAt    DateTime    @updatedAt @map("updated_at")
+  tags         Tag[]
+  NotesTable   NotesTable? @relation(fields: [notesTableId], references: [id])
+  notesTableId String?     @db.ObjectId
+}
+
+model Tag {
+  id     String  @id @default(auto()) @map("_id") @db.ObjectId
+  name   String?
+  Note   Note?   @relation(fields: [noteId], references: [id])
+  noteId String? @db.ObjectId
+}
+
+model NotesTable {
+  id             String        @id @default(auto()) @map("_id") @db.ObjectId
+  name           String?
+  notes          Note[]
+  createdAt      DateTime      @default(now()) @map("created_at")
+  updatedAt      DateTime      @updatedAt @map("updated_at")
+  WorkingSpace   WorkingSpace? @relation(fields: [workingSpaceId], references: [id])
+  workingSpaceId String?       @db.ObjectId
+}
+
+model WorkingSpace {
+  id          String       @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  favorite    Boolean?
+  notesTables NotesTable[]
+}

@@ -1,4 +1,4 @@
-import { NavLinks } from "@/lib/data"
+import { NavLinks } from "../../lib/data"
 import Link from "next/link"
 import { Button } from "./button"
 import Image from "next/image"
@@ -8,7 +8,7 @@ export default function Navbar() {
     <header className=' fixed top-0 w-full z-50 p-3 bg-Bgwhite/70 backdrop-blur border-b border-b-LightPurple/10'>
       <div className=' container mx-auto flex justify-between items-center'>
         <div className=" flex justify-center items-center">
-          <Link href="/" className=" text-3xl font-bold text-DarkPurple pr-5"> <Image src={imgsrc} alt="NoteWise Logo" /> </Link>
+          <Link href="/" className=" text-3xl font-bold text-DarkPurple pr-5"> <Image src={imgsrc} alt="NoteWise Logo" priority width={55} height={55} /> </Link>
           <ul className=" hidden lg:flex">
           {
             NavLinks.map((link,i)=>{

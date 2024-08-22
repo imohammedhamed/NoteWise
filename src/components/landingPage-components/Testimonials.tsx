@@ -1,6 +1,6 @@
-import { testimonials } from "@/lib/data"
-import MaxWContainer from "./MaxWContainer"
-import Section from "./Section"
+import { testimonials } from "../../lib/data"
+import MaxWContainer from "../ui/MaxWContainer"
+import Section from "../ui/Section"
 import SectionHeading from "./SectionHeading"
 export default function Testimonials() {
   return (
