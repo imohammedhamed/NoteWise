@@ -21,6 +21,7 @@ const config = {
       Purple700:"#7e22ce",
       Red700:"#b91c1c",
       Gray400:"#9ca3af",
+      Dark:"#030712",
       Bgwhite:"rgb(255 255 255)",
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",

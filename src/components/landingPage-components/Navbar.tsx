@@ -1,6 +1,6 @@
 import { NavLinks } from "../../lib/data"
 import Link from "next/link"
-import { Button } from "./button"
+import { Button } from "../ui/button"
 import Image from "next/image"
 import imgsrc from "../../../public/NoteWise-logo.svg"
 export default function Navbar() {

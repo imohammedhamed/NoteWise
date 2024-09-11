@@ -1,5 +1,6 @@
 import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
+import prisma from "./prisma";
 
 export default async function getUserSession(){
     try {

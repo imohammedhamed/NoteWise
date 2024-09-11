@@ -10,7 +10,10 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "NoteWise",
+  title: {
+    default:"NoteWise",
+    template:"%s - NoteWise"
+  },
   description: "Interact with Your Notes Like Never Before. Organize, Discuss, and Enhance Your Ideas Seamlessly.",
 };
 
