@@ -3,52 +3,60 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  name      String
-  email     String   @unique
-  password  String
-  picture   String?
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  id            String         @id @default(uuid()) // Use UUID for primary key
+  name          String
+  email         String         @unique
+  password      String
+  picture       String?
+  WorkingSpaces WorkingSpace[]
+  createdAt     DateTime       @default(now()) @map("created_at")
+  updatedAt     DateTime       @updatedAt @map("updated_at")
 }
 
 model Note {
-  id           String      @id @default(auto()) @map("_id") @db.ObjectId
+  id           String      @id @default(uuid()) // Use UUID for primary key
   title        String?
+  slug         String?     @unique // Slug remains unique
   body         String?
-  favorite     Boolean?
+  favorite     Boolean?    @default(false) // Use default false for boolean fields
   createdAt    DateTime    @default(now()) @map("created_at")
   updatedAt    DateTime    @updatedAt @map("updated_at")
-  tags         Tag[]
+  tags         Tag[] // One-to-many relation to Tag
   NotesTable   NotesTable? @relation(fields: [notesTableId], references: [id])
-  notesTableId String?     @db.ObjectId
-}
-
-model Tag {
-  id     String  @id @default(auto()) @map("_id") @db.ObjectId
-  name   String?
-  Note   Note?   @relation(fields: [noteId], references: [id])
-  noteId String? @db.ObjectId
-}
-
-model NotesTable {
-  id             String        @id @default(auto()) @map("_id") @db.ObjectId
-  name           String?
-  notes          Note[]
-  createdAt      DateTime      @default(now()) @map("created_at")
-  updatedAt      DateTime      @updatedAt @map("updated_at")
-  WorkingSpace   WorkingSpace? @relation(fields: [workingSpaceId], references: [id])
-  workingSpaceId String?       @db.ObjectId
+  notesTableId String?     @default(uuid()) // Foreign key as UUID
 }
 
 model WorkingSpace {
-  id          String       @id @default(auto()) @map("_id") @db.ObjectId
+  id          String       @id @default(uuid()) // Use UUID for primary key
   name        String
-  favorite    Boolean?
-  notesTables NotesTable[]
+  slug        String?      @unique // Slug remains unique
+  favorite    Boolean?     @default(false) // Use default false for boolean fields
+  notesTables NotesTable[] // One-to-many relation to NotesTable
+  User        User?        @relation(fields: [userId], references: [id])
+  userId      String?      @default(uuid()) // Foreign key as UUID
+  createdAt   DateTime     @default(now()) @map("created_at")
+  updatedAt   DateTime     @updatedAt @map("updated_at")
+}
+
+model NotesTable {
+  id             String        @id @default(uuid()) // Use UUID for primary key
+  name           String?
+  slug           String?       @unique // Slug remains unique
+  notes          Note[] // One-to-many relation to Note
+  createdAt      DateTime      @default(now()) @map("created_at")
+  updatedAt      DateTime      @updatedAt @map("updated_at")
+  WorkingSpace   WorkingSpace? @relation(fields: [workingSpaceId], references: [id])
+  workingSpaceId String?       @default(uuid()) // Foreign key as UUID
+}
+
+model Tag {
+  id     String  @id @default(uuid()) // Use UUID for primary key
+  name   String?
+  Note   Note?   @relation(fields: [noteId], references: [id])
+  noteId String? @default(uuid()) // Foreign key as UUID
 }

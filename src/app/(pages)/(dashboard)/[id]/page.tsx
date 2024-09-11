@@ -1,12 +1,27 @@
-import { redirect } from 'next/navigation'
-import getUserSession from '@/lib/actions/getUserSession';
-export default async function page({params}:any) {
-    const session = await getUserSession()
-  if(!session){
-    redirect(`/login`)
-  }else{
-  return (
-    <div className="mt-24 text-2xl">{params.id}</div>
-  )
+import MaxWContainer from "@/components/ui/MaxWContainer";
+import getUserData from "@/lib/actions/getUserData";
+import UserWorkingSpaceListCards from "@/components/dashboard-components/UserWorkingSpaceListCards";
+
+interface PageProps {
+  params: {
+    id: string;
+  };
 }
+
+export default async function Page({ params }: PageProps) {
+  const UserData = await getUserData(params.id);
+
+  return (
+    <MaxWContainer className="mt-14 mx-5">
+      <h1 className="w-full text-center text-3xl font-semibold text-DarkPurple">
+        Good evening, {UserData?.name}
+      </h1>
+      <div className="w-full flex flex-col justify-center items-start gap-2 my-14 drop-shadow-lg">
+        <p className="text-sm text-start font-extrabold text-LightPurple">
+          Your working space list
+        </p>
+        <UserWorkingSpaceListCards UserId={UserData?.id} />
+      </div>
+    </MaxWContainer>
+  );
 }
