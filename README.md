@@ -5,6 +5,8 @@
 Interact with Your Notes Like Never Before.
 Organize, Discuss, and Enhance Your Ideas Seamlessly.
 
+![Home Page](showCase_imgs/HomePage)
+
 ## Features
 
 - **AI-Powered Assistance**: Generate content, receive suggestions, and improve your notes with AI-powered features.
