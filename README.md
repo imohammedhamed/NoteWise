@@ -83,15 +83,15 @@ After starting the application, you can access it in your web browser at `http:/
 
 **Breadcrumb Navigation:** Move between sections of your notes quickly with breadcrumb trails.
 
-## User Authentication
+### User Authentication
 
 NoteWise supports secure login via OAuth providers such as Google and GitHub, as well as email-based authentication. Once logged in, users can access their personalized notes and settings.
 
-## Real-Time AI Suggestions
+### Real-Time AI Suggestions
 
 While writing, the AI will provide context-aware suggestions, improving your note-taking speed and quality. Simply click on the suggestions or allow auto-completion to assist you while writing.
 
-## Responsive Design
+### Responsive Design
 
 NoteWise is designed to work across devices—whether you're using a desktop, tablet, or mobile phone, your experience will remain smooth and consistent.
 
