@@ -22,7 +22,7 @@ export default function Navbar() {
         
   return (
     <motion.div 
-      className="fixed top-0 w-full z-50"
+      className="fixed top-0 w-full z-50" 
       initial={{y: -60 , opacity: 0 }} 
       animate={{ y:0 , opacity:1 }}
       transition={{ease:"linear"}}
