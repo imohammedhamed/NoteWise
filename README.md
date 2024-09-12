@@ -37,7 +37,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 - **Node.js** (version 18+)
 - **npm** or **yarn**
-- **NeonDB** database connection
+- **NeonDB** "postgresql" database connection
 
 ## Installation
 
