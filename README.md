@@ -2,6 +2,9 @@
 
 **NoteWise** is an AI-powered, real-time note-taking SaaS platform designed to help users create, edit, and organize their notes seamlessly. With a Notion-style WYSIWYG editor, users can enjoy a rich-text editing experience and leverage AI to improve productivity through intelligent suggestions and auto-completion.
 
+Interact with Your Notes Like Never Before.
+Organize, Discuss, and Enhance Your Ideas Seamlessly.
+
 ## Features
 
 - **AI-Powered Assistance**: Generate content, receive suggestions, and improve your notes with AI-powered features.
@@ -20,7 +23,7 @@
   - Tailwind CSS for responsive and modern UI
 - **Backend**: 
   - Prisma ORM for database management
-  - NeonDB for data storage
+  - NeonDB for data storage "postgresql"
 - **AI Integration**: 
   - OpenAI API via Vercel AI SDK 
 - **Authentication**: 
