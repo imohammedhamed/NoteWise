@@ -47,10 +47,46 @@ To set up NoteWise locally, follow these steps:
 
    ```bash
    git clone https://github.com/imohammedhamed/NoteWise.git
+   ```
+   ```bash
+   cd NoteWise
+   ```
+   ```bash
+   npm install
+   ```
+   Create a .env.local file in the root of the project and add the required environment variables:
+   ```bash
+     NEXT_PUBLIC_OPENAI_API_KEY=your-openai-api-key
+    DATABASE_URL=your-database-url
+    NEXTAUTH_URL=http://localhost:3000
+    NEXTAUTH_SECRET=your-nextauth-secret
+   ```
+   Use Prisma to initialize your database with the required schema:
+   ```bash
+   npx prisma migrate dev
+   ```
+   Start the development server:
+   ```bash
+    npm run dev
+   ```
 
 ## Usage
 
 After starting the application, you can access it in your web browser at `http://localhost:3000`. From there, you can browse the menu, select items, and place an order.
+##Once NoteWise is set up, users can:
+
+**Create and Edit Notes:** Use the WYSIWYG editor to format text, create headings, lists, links, and more.
+**AI-Assisted Writing:** Get content suggestions and auto-completions based on the context of your notes.
+**Auto-Save:** Notes will automatically save as you type, so you don't need to worry about losing your work.
+**Breadcrumb Navigation:** Move between sections of your notes quickly with breadcrumb trails.
+##User Authentication
+NoteWise supports secure login via OAuth providers such as Google and GitHub, as well as email-based authentication. Once logged in, users can access their personalized notes and settings.
+
+##Real-Time AI Suggestions
+While writing, the AI will provide context-aware suggestions, improving your note-taking speed and quality. Simply click on the suggestions or allow auto-completion to assist you while writing.
+
+##Responsive Design
+NoteWise is designed to work across devices—whether you're using a desktop, tablet, or mobile phone, your experience will remain smooth and consistent.
 
 ## Contributing
 
