@@ -4,7 +4,7 @@ import Section from "../ui/Section"
 import SectionHeading from "./SectionHeading"
 export default function Testimonials() {
   return (
-    <Section sectionId="testimonials" className=" bg-Purple50">
+    <Section sectionId="testimonials">
         <MaxWContainer>
             <SectionHeading
             SectionTitle = "Testimonials"

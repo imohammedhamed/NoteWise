@@ -21,14 +21,13 @@ export default function Navbar() {
       })
         
   return (
-    <div className="fixed top-0 w-full z-50" >
     <motion.div 
+      className="fixed top-0 w-full z-50" 
       initial={{y: -60 , opacity: 0 }} 
       animate={{ y:0 , opacity:1 }}
-      transition={{ease:"easeOut",delay:0.5}}
+      transition={{ease:"linear",delay:0.5}}
     >
-      <TopBanner/>
-    </motion.div>
+    <TopBanner/>
       <motion.header 
         className=' p-3 bg-Bgwhite/70 backdrop-blur border-b border-b-LightPurple/10'
         initial={{y: -60 , opacity: 0 }} 
@@ -54,6 +53,6 @@ export default function Navbar() {
           </div>
         </div>
       </motion.header>
-    </div>
+    </motion.div>
   )
 }
