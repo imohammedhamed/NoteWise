@@ -8,6 +8,7 @@ import getUserSession from '@/lib/actions/getUserSession';
 import prisma from "@/lib/actions/prisma"
 import Navbar from '@/components/landingPage-components/Navbar';
 import Footer from '@/components/landingPage-components/Footer';
+import TopBanner from "@/components/landingPage-components/TopBanner"
 export default async function page() {
   const session = await getUserSession();
     if (session) {
@@ -28,9 +29,9 @@ export default async function page() {
           <HowToStartSection />
           <Testimonials />
           <AboutSection />
-          <SignUpToday />
         </div>
-        <Footer />
+          <SignUpToday />
+          {/* <Footer /> */}
       </div>
     );
 }

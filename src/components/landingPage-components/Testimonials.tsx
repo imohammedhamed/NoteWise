@@ -4,7 +4,7 @@ import Section from "../ui/Section"
 import SectionHeading from "./SectionHeading"
 export default function Testimonials() {
   return (
-    <Section sectionId="testimonials">
+    <Section sectionId="testimonials" className=" bg-Purple50">
         <MaxWContainer>
             <SectionHeading
             SectionTitle = "Testimonials"
@@ -15,8 +15,8 @@ export default function Testimonials() {
                     testimonials.map(item => {
                         return(
                             <div key={item.id} className={` lg:w-96 flex flex-col flex-shrink-0 w-80 border border-solid border-LightPurple rounded-xl p-4 bg-${item.Color}`}>
-                                <h3 className="pb-2 text-LightPurple text-sm font-semibold">{item.Title}</h3>
-                                <p className="text-DarkPurple text-base ">{item.Body}</p>
+                                {/* <h3 className="pb-2 text-LightPurple text-sm font-semibold">{item.Title}</h3> */}
+                                <p className="text-DarkPurple text-base font-semibold ">{`"${item.Body}"`}</p>
                             </div>
                         )
                     })
