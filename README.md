@@ -2,8 +2,6 @@
 
 **NoteWise** is an AI-powered, real-time note-taking SaaS platform designed to help users create, edit, and organize their notes seamlessly. With a Notion-style WYSIWYG editor, users can enjoy a rich-text editing experience and leverage AI to improve productivity through intelligent suggestions and auto-completion.
 
-Interact with Your Notes Like Never Before.
-Organize, Discuss, and Enhance Your Ideas Seamlessly.
 
 ![Home Page](showCase_imgs/HomePage.png)
 
