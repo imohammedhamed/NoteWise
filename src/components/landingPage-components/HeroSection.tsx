@@ -12,7 +12,7 @@ export default function HeroSection() {
         initial={{y:10,opacity:0}}
         whileInView={{y:0,opacity:1}}
         transition={{ease:"linear",delay:0.2}}
-        className=" mt-40 flex justify-center items-center w-full">
+        className=" mt-44 flex justify-center items-center w-full">
         <MaxWContainer className="*:text-center relative px-4">
         <h1 className=" lg:text-5xl text-2xl font-semibold pb-5">Take Notes to the Next Level with <br /> <span className=" border-b-[5px] border-Purple700">AI-Powered</span> Conversations</h1>
         <p className=" lg:text-xl text-base font-medium">Interact with Your Notes Like Never Before. <br /> Organize, Discuss, and Enhance Your Ideas Seamlessly.</p>
