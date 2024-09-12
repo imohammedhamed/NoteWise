@@ -1,3 +1,7 @@
+import imgSrc_TalkNote from "../../public/chat_Note.png"
+import imgSrc_Categorization from "../../public/data-classification_note.png"
+import imgSrc_TextEditor from "../../public/content-creator_note.png"
+import imgSrc_Sync from "../../public/sync_note.png"
 export const NavLinks = [
     {
         Name:"Home",
@@ -47,21 +51,29 @@ export const aboutCard = [
         id:"1",
         Title:"Talk to Your Notes",
         Body:"Our advanced AI allows you to interact with your notes naturally. Ask questions, get summaries, and explore insights seamlessly.",
+        imgSrc:imgSrc_TalkNote,
+        isReverse:false
     },
     {
         id:"2",
         Title:"Smart Categorization and Tagging",
         Body:"Automatically organize your notes with smart tags and categories, making it easy to find what you need when you need it.",
+        imgSrc:imgSrc_Categorization,
+        isReverse:true
     },
     {
         id:"3",
-        Title:"Task Management",
-        Body:"Convert your notes into tasks and set reminders to stay on top of your projects and deadlines.",
+        Title:"Rich Text Editor",
+        Body:"Create and edit notes with a Notion-style WYSIWYG editor, powered by Novel. Enjoy AI-powered autocompletion and rich text formatting.",
+        imgSrc:imgSrc_TextEditor,
+        isReverse:false
     },
     {
         id:"4",
         Title:"Sync Across Devices",
         Body:"Access your notes from anywhere with seamless syncing across all your devices.",
+        imgSrc:imgSrc_Sync,
+        isReverse:true
     },
 ] as const 
 
