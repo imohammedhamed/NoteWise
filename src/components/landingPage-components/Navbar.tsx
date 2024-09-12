@@ -25,7 +25,7 @@ export default function Navbar() {
       className="fixed top-0 w-full z-50" 
       initial={{y: -60 , opacity: 0 }} 
       animate={{ y:0 , opacity:1 }}
-      transition={{ease:"linear",delay:0.5}}
+      transition={{ease:"linear",delay:0.3}}
     >
     <TopBanner/>
       <motion.header 
@@ -49,7 +49,7 @@ export default function Navbar() {
           </div>
           <div className=" flex justify-center items-center gap-3">
           <Button><Link href="/signup" className=" text-sm font-medium">Get Started for Free</Link></Button>
-          <Button variant="ghost"><Link href="/login" className=" text-sm font-bold">log in</Link></Button>
+          <Button variant="ghost"><Link href="/login" className=" text-sm font-medium">log in</Link></Button>
           </div>
         </div>
       </motion.header>

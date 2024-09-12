@@ -16,7 +16,7 @@ export default function AboutSection() {
                     aboutCard.map(item =>{
                         return(
                             <div key={item.id} className=" w-full flex justify-center items-center">
-                                <div className=" flex flex-col justify-center items-start p-6 bg-Purple50 border border-solid border-LightPurple rounded-xl w-full h-max lg:w-[800px] lg:h-36">
+                                <div className=" space-y-3 flex flex-col justify-center items-start p-6 bg-Purple50 border border-solid border-LightPurple rounded-xl w-full h-max lg:w-[800px] lg:h-36">
                                     <span className=" flex justify-center items-center gap-3">
                                     <Image src={item.imgSrc} alt="about img" width={30} height={30} className=" mb-1.5"/>
                                     <h3 className=" pb-2 text-lg text-DarkPurple font-bold ">{item.Title}</h3>

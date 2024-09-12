@@ -6,7 +6,7 @@ import Section from "../ui/Section";
 
 export default function HowToStartSection() {
   return (
-        <Section sectionId ="How_To_Start" className=" my-10 bg-Purple50">
+        <Section sectionId ="How_To_Start">
         <MaxWContainer>
             <SectionHeading
             SectionTitle="How To Start ?"
