@@ -5,7 +5,7 @@
 Interact with Your Notes Like Never Before.
 Organize, Discuss, and Enhance Your Ideas Seamlessly.
 
-![Home Page](showCase_imgs/HomePage)
+![Home Page](showCase_imgs/HomePage.png)
 
 ## Features
 
