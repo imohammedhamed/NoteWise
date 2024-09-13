@@ -1,6 +1,6 @@
 import HeroSection from "@/components/landingPage-components/HeroSection"
 import HowToStartSection from "@/components/landingPage-components/HowToStartSection"
-import AboutSection from "@/components/landingPage-components/AboutSection"
+import FeaturesSection from "@/components/landingPage-components/FeaturesSection"
 import SignUpToday from "@/components/landingPage-components/SignUpToday"
 import Testimonials from "@/components/landingPage-components/Testimonials"
 import { redirect } from 'next/navigation'
@@ -28,7 +28,7 @@ export default async function page() {
           <HeroSection />
           <HowToStartSection />
           <Testimonials />
-          <AboutSection />
+          <FeaturesSection />
         </div>
           <SignUpToday />
           {/* <Footer /> */}

@@ -11,7 +11,7 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: {
-    default:"NoteWise : Organize, Discuss, and Enhance Your Ideas Seamlessly",
+    default:"NoteWise : Take Notes to the Next Level and Organize, Discuss, and Enhance Your Ideas Seamlessly",
     template:"%s - NoteWise"
   },
   description: "Interact with Your Notes Like Never Before. Organize, Discuss, and Enhance Your Ideas Seamlessly.",

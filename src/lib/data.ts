@@ -9,8 +9,8 @@ export const NavLinks = [
         clicked:true,
     },
     {
-        Name:"About Us",
-        path:"/#about",
+        Name:"Features",
+        path:"/#features",
         clicked:false,
     },
     {
@@ -46,7 +46,7 @@ export const HowToStartSteps =[
     },
 ]as const 
 
-export const aboutCard = [
+export const features = [
     {
         id:"1",
         Title:"Talk to Your Notes",

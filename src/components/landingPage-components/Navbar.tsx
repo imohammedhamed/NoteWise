@@ -25,7 +25,7 @@ export default function Navbar() {
       className="fixed top-0 w-full z-50" 
       initial={{y: -60 , opacity: 0 }} 
       animate={{ y:0 , opacity:1 }}
-      transition={{ease:"linear",delay:0.3}}
+      transition={{ease:"linear",duration:0.6,delay:0.3}}
     >
     <TopBanner/>
       <motion.header 
