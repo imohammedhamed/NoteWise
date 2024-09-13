@@ -27,8 +27,8 @@ export default async function page() {
         <div className="flex-grow flex-1">
           <HeroSection />
           <HowToStartSection />
-          <Testimonials />
           <FeaturesSection />
+          <Testimonials />
         </div>
           <SignUpToday />
           {/* <Footer /> */}
