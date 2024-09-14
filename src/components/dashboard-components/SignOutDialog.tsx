@@ -36,15 +36,11 @@ export default function SignOutDialog() {
       </AlertDialogTrigger>
       <AlertDialogContent className="lg:w-[525px] w-[350px]">
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-          <AlertDialogDescription className=" text-DarkPurple/50 lg:text-sm text-xs font-bold">
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </AlertDialogDescription>
+          <AlertDialogTitle>Are you sure?</AlertDialogTitle>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <Button onClick={handleSignout} disabled={loading}>{loading?<span className="loading loading-infinity loading-md"></span>:`SignOut`}</Button>
+          <Button onClick={handleSignout} disabled={loading}>{loading?`SignOut...`:`SignOut`}</Button>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

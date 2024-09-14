@@ -6,7 +6,7 @@ import { Toaster, toast } from 'sonner'
 
 const lato = Lato({
   weight: ["400"],
-  subsets: ["latin"], // Specify the subsets here
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
