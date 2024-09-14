@@ -34,7 +34,22 @@ export default function AddNewTable({className,workingSpaceId}:AddNewTableProps)
     }
   return (
     <Button onClick={handleClick} disabled={loading} className={cn("flex justify-center items-center",className)}>
-        {loading?<span className="loading loading-infinity loading-md"></span>: <span className="flex justify-center items-center gap-1 text-sm font-semibold"><TbTablePlus className=" mt-0.5 size-5"/>Insert Table</span>}
+        {
+            loading?(
+                <div className="flex justify-center items-center">
+                    <p className="flex justify-center items-center gap-1 text-sm font-semibold">
+                        <TbTablePlus className=" mt-0.5 size-5"/>Insert Table
+                    </p>
+                    ...
+                </div>
+            ): 
+            (
+                <p className="flex justify-center items-center gap-1 text-sm font-semibold">
+                    <TbTablePlus className=" mt-0.5 size-5"/>Insert Table
+                </p>
+            )
+            
+        }
     </Button>
   )
 }
