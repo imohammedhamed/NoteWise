@@ -34,12 +34,25 @@ export default function AddNewNoteBtn({NoteTableId}:AddNewNoteBtnProps) {
   return (
     <Button disabled={loading} onClick={handleClick} className="h-8">
         {
-            // loading?<span className="loading loading-infinity loading-sm"></span>:
+            loading?
+            (
+            <div className=" flex justify-center items-center">
+                <span className=" flex justify-center items-center gap-1">
+                <HiOutlineSquaresPlus className=" mt-0.5 size-5"/>
+                <p className=" text-sm font-bold lg:block hidden">New Note</p>
+                </span>
+                ...
+            </div>
+            )
+            :
+            (
             <span className=" flex justify-center items-center gap-1">
                 <HiOutlineSquaresPlus className=" mt-0.5 size-5"/>
                 <p className=" text-sm font-bold lg:block hidden">New Note</p>
             </span>
+            )
         }
+        
     </Button>
   )
 }
