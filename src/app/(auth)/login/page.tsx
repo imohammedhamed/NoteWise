@@ -25,6 +25,10 @@ import { toast } from 'sonner';
 export default function LogInPage() {
     const router = useRouter()
     const [loading,setLoading] = useState(false)
+    const [ishidden , setIshidden] = useState(false)
+    function handleishidden(){
+      setIshidden(!ishidden)
+    }
     const formSchema = z.object({
         email: z.string().email({ message: "* Invalid email address" }),
         password: z.string().min(6, { message: "* password is incorrect" }),
@@ -87,7 +91,10 @@ export default function LogInPage() {
                   <FormItem>
                     <FormLabel className=' text-DarkPurple font-bold'>Password</FormLabel>
                     <FormControl>
-                      <Input  className='text-DarkPurple' placeholder="Enter your password..." type='password' {...field} />
+                      <span  className=' relative'>
+                      <Input  className='text-DarkPurple' placeholder="Enter your password..." type={ishidden?'text':'password'} {...field} />
+                      <Button type='button' onClick={handleishidden} variant="outline" className=' border-none text-LightPurple absolute top-[1.71rem] right-1 h-8 px-3'>{ishidden?`hidden`:`show`}</Button>
+                      </span>
                     </FormControl>
                     <FormMessage className='text-Red700'/>
                   </FormItem>
