@@ -75,11 +75,11 @@ export default async function SideBar() {
               </div>
               </SheetHeader>
               <div className=" py-5">
-                  <p className="text-xs font-bold text-LightPurple/50 w-full flex justify-between items-center flex-wrap flex-grow-0 gap-2 pb-2">Your WorkSpace <span><AddWorkSpaceBtn UserId={user?.id}/></span></p>
+                  <p className="text-xs font-bold text-LightPurple/50 w-full flex justify-between items-center flex-wrap flex-grow-0 gap-2 pb-2">Your Favorite List</p>
                   <FavoriteList userId={user?.id} />
               </div>
               <div className="">
-                  <p className="text-xs font-bold text-LightPurple/50 w-full flex justify-between items-center flex-wrap flex-grow-0 gap-2 pb-2">Your WorkSpace</p>
+                  <p className="text-xs font-bold text-LightPurple/50 w-full flex justify-between items-center flex-wrap flex-grow-0 gap-2 pb-2">Your WorkSpace <span><AddWorkSpaceBtn UserId={user?.id}/></span></p>
                   <WorkSpaceList userId={user?.id} />
               </div>
           </SheetContent>

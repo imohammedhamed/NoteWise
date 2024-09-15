@@ -9,7 +9,7 @@ import BlurEffect from "../ui/BlurEffect"
 export default function HeroSection() {
   return (
     <motion.section
-        initial={{y:50,opacity:0}}
+        initial={{y:90,opacity:0}}
         whileInView={{y:0,opacity:1}}
         transition={{ease:"easeInOut",duration:0.7,delay:0.2}}
         viewport={{ once: true, amount: 0.5 }}
