@@ -93,7 +93,7 @@ export default function LogInPage() {
                     <FormControl>
                       <span  className=' relative'>
                       <Input  className='text-DarkPurple' placeholder="Enter your password..." type={ishidden?'text':'password'} {...field} />
-                      <Button type='button' onClick={handleishidden} variant="outline" className=' border-none text-LightPurple absolute top-[1.71rem] right-1 h-8 px-3'>{ishidden?`hidden`:`show`}</Button>
+                      <Button type='button' onClick={handleishidden} variant="outline" className=' border-none text-LightPurple absolute top-[1.68rem] right-1 h-8 px-3'>{ishidden?`hidden`:`show`}</Button>
                       </span>
                     </FormControl>
                     <FormMessage className='text-Red700'/>
@@ -103,7 +103,7 @@ export default function LogInPage() {
               <br />
               <Button type="submit" disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md"></span> :`Log In`}</Button>
               <p className='text-xs lg:text-sm text-DarkBlue font-semibold p-2'>
-                IF YOU {`DON'T`} HAVE AN ACCOUNT ? <Link href='/signup' className=' text-Purple700 hover:underline'>SIGN UP</Link>
+                IF YOU {`DON'T`} HAVE AN ACCOUNT <Link href='/signup' className=' text-Purple700 hover:underline'>SIGN UP</Link>
               </p>
             </form>
           </Form>

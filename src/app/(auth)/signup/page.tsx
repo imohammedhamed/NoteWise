@@ -42,7 +42,6 @@ export default function SignUpPage() {
         confirmPassword: "",
         },
     })
-
     async function onSubmit(values: z.infer<typeof formSchema>) {
       try {
         setLoading(true)
@@ -133,7 +132,7 @@ export default function SignUpPage() {
               <br />
               <Button type="submit" disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md"></span> :`Sign Up`}</Button>
               <p className='text-xs lg:text-sm text-DarkBlue font-semibold p-2'>
-                IF YOU HAVE AN ACCOUNT ? <Link href='/login' className=' text-Purple700 hover:underline'>LOGIN</Link>
+                IF YOU HAVE AN ACCOUNT <Link href='/login' className=' text-Purple700 hover:underline'>LOGIN</Link>
               </p>
             </form>
           </Form>

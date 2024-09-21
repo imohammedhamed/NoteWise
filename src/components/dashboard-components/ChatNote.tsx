@@ -49,16 +49,16 @@ export default function ChatNote({UserNoteTitle,UserNoteBody,UserNoteId,WorkingS
     )
   }
   return (
-        <Drawer>
+    <Drawer>
       <DrawerTrigger asChild>
         <Button variant="outline" className=" fixed bottom-5 right-5 border-none rounded-full bg-Purple300"><FaRegComments className=" lg:size-8 size-6 text-Purple700"/></Button>
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm mb-10 mt-5">
           <DrawerHeader className=" *:w-full *:text-center space-y-2">
-            <DrawerTitle className=" text-2xl text-Red700">! Opss</DrawerTitle>
+            <DrawerTitle className=" text-3xl text-Red700">! Opps</DrawerTitle>
             <DrawerDescription className=" text-sm font-bold text-LightPurple"> {`We're currently fixing the chatbot; there's a problem with the OpenAI API.`}</DrawerDescription>
-            {/* <DrawerDescription className=" text-sm font-bold text-LightPurple">Our advanced AI allows you to interact with your notes naturally Ask questions, get summaries,</DrawerDescription> */}
+            {/* <DrawerDescription className=" text-xs font-bold text-LightPurple">Our advanced AI allows you to interact with your notes naturally Ask questions, get summaries,</DrawerDescription> */}
           </DrawerHeader>
           <div className=" flex flex-col flex-1">
             <div className="flex-grow min-h-[250px] overflow-y-auto" >
