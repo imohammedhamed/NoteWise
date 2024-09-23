@@ -35,7 +35,7 @@ export default async function SideBar() {
     const user = await getUniqueUser()
   return (
     <div>
-        <aside className="fixed top-0 left-0 z-40 bg-Bgwhite border-r border-DarkPurple/10 w-[20rem] h-screen overflow-y-auto px-5 py-7 lg:block hidden">
+        <aside className="fixed top-0 left-0 z-40 bg-Bgwhite border-r border-DarkPurple/10 w-[19rem] h-screen overflow-y-auto px-5 py-7 lg:block hidden">
               <div className=" pb-7">
                 <UserAccountBtn
                 userId={user?.id}
