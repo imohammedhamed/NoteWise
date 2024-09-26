@@ -82,7 +82,7 @@ export default function ChangeEmailDialog({id,name,email,password}:ChangeEmailDi
       <DialogTrigger asChild>
         <Button variant="outline" className=" h-9">change email</Button>
       </DialogTrigger>
-      <DialogContent className="lg:w-[425px] w-[350px] rounded-xl">
+      <DialogContent className="sm:min-w-[425px]">
         <DialogHeader className=" *:w-full *:text-center mb-7">
             <MdOutlineMarkEmailUnread className=" text-Purple700 size-16"/>
           <DialogTitle className=" text-DarkPurple text-2xl font-bold">Change Email</DialogTitle>
@@ -118,7 +118,7 @@ export default function ChangeEmailDialog({id,name,email,password}:ChangeEmailDi
                         </FormItem>
                     )}
                     />
-                    <span className=" w-full flex justify-center items-center">
+                    <span className=" bg-Purple700 rounded-md w-full flex justify-center items-center">
                     <Button type="submit" disabled={loading} className="w-full">{loading?<span className="loading loading-infinity loading-md"></span>:`Change Email`}</Button>
                     </span>
                 </form>

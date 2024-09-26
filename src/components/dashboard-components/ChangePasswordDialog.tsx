@@ -82,7 +82,7 @@ export default function ChangePasswordDialog({id,name,password}:ChangePasswordDi
           <DialogTrigger asChild>
             <Button variant="outline" className=" h-9">change password</Button>
           </DialogTrigger>
-        <DialogContent className="lg:w-[425px] w-[350px] rounded-xl">
+        <DialogContent className="sm:min-w-[425px]">
           <DialogHeader className=" *:w-full *:text-center mb-7">
               <PiPasswordDuotone className=" text-Purple700 size-16"/>
             <DialogTitle className=" text-DarkPurple text-2xl font-bold">Change password</DialogTitle>
