@@ -133,7 +133,7 @@ export default function ChangePasswordDialog({id,name,password}:ChangePasswordDi
                 )}
                 />
                 <span className=" w-full flex justify-center items-center">
-                      <Button type="submit" disabled={loading} className=" w-full">{loading?<span className="loading loading-infinity loading-md"></span>:`Change Password`}</Button>
+                      <Button type="submit" disabled={loading} className="w-full">{loading?<span className="loading loading-infinity loading-md"></span>:`Change Password`}</Button>
                 </span>
               </form>
               </Form>
