@@ -41,7 +41,7 @@ export default async function SideBar() {
                 userId={user?.id}
                 />
                 <div className="pt-4">
-                  <Link href={`/${user?.id}`} className=" w-full flex justify-start items-center gap-2 p-1.5 rounded-xl transition-all hover:bg-Purple100">
+                  <Link href={`/${user?.id}`} className=" w-full flex justify-start items-center gap-2 p-1.5 rounded-md transition-all hover:bg-Purple100">
                   <FaHouse className=" size-4 text-DarkPurple"/>
                   <p className="text-base font-bold text-DarkPurple">Home</p>
                   </Link>

@@ -10,7 +10,6 @@ const noteBodySchema = z.object({
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    console.log("Received body:", body);
 
     const { id, NoteBody } = noteBodySchema.parse(body);
 

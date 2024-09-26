@@ -18,11 +18,11 @@ export default function UserNoteDropMenu({UserNoteId,UserNoteName}:UserNoteDropM
         <DropdownMenuContent className="w-56 space-y-3 p-1.5">
             {/* <UserNotesRenameBtn 
             UserNoteId={UserNoteId} 
-            InitialUserNoteName={UserNoteName|| "Untitled"}
+            InitialUserNoteName={UserNoteName|| "Untitled Note"}
             />
             <UserNotesDeleteBtn
             UserNoteId={UserNoteId} 
-            UserNoteName={UserNoteName|| "Untitled"}
+            UserNoteName={UserNoteName|| "Untitled Note"}
             /> */}
         </DropdownMenuContent>
     </DropdownMenu>

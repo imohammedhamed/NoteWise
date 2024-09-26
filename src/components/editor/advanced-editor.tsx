@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   EditorRoot,
   EditorCommand,
@@ -11,10 +11,11 @@ import {
   EditorBubble,
 } from "novel";
 import { ImageResizer, handleCommandNavigation } from "novel/extensions";
-import { defaultExtensions } from "./extenstions";
+import { defaultExtensions } from "./extenstions"
 import { NodeSelector } from "./selectors/node-selector";
 import { LinkSelector } from "./selectors/link-selector";
 import { ColorSelector } from "./selectors/color-selector";
+
 import { TextButtons } from "./selectors/text-buttons";
 import { slashCommand, suggestionItems } from "./slash-command";
 import { handleImageDrop, handleImagePaste } from "novel/plugins";
@@ -24,10 +25,9 @@ import { Separator } from "../ui/separator";
 const extensions = [...defaultExtensions, slashCommand];
 
 interface EditorProp {
-  initialValue?: JSONContent;
-  onChange: (value: string) => void; // Adjusted to accept string if HTML
+  initialValue?: any;
+  onChange: (value: any) => void;
 }
-
 const Editor = ({ initialValue, onChange }: EditorProp) => {
   const [openNode, setOpenNode] = useState(false);
   const [openColor, setOpenColor] = useState(false);
@@ -36,7 +36,7 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
   return (
     <EditorRoot>
       <EditorContent
-        className="border-none p-4 rounded-xl"
+        className=" text-DarkPurple p-4"
         {...(initialValue && { initialContent: initialValue })}
         extensions={extensions}
         editorProps={{
@@ -47,15 +47,15 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
           handleDrop: (view, event, _slice, moved) =>
             handleImageDrop(view, event, moved, uploadFn),
           attributes: {
-            class: `prose prose-lg dark:prose-invert prose-headings:font-title font-default focus:outline-none max-w-full`,
+            class: ` text-DarkPurple prose-lg dark:prose-invert prose-headings:font-title font-default focus:outline-none max-w-full `,
           },
         }}
         onUpdate={({ editor }) => {
-          onChange(editor.getHTML()); // Provide HTML string
+          onChange(editor.getHTML());
         }}
         slotAfter={<ImageResizer />}
       >
-        {/* <EditorCommand className="z-50 h-auto max-h-[330px] overflow-y-auto rounded-md border border-muted bg-Bgwhite px-1 py-2 shadow-md transition-all">
+        <EditorCommand className="z-50 h-auto max-h-[330px] overflow-y-auto rounded-md border border-muted bg-background px-1 py-2 shadow-md transition-all">
           <EditorCommandEmpty className="px-2 text-muted-foreground">
             No results
           </EditorCommandEmpty>
@@ -79,22 +79,24 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
               </EditorCommandItem>
             ))}
           </EditorCommandList>
-        </EditorCommand> */}
-        <EditorBubble
+        </EditorCommand>
+
+        {/* <EditorBubble
           tippyOptions={{
             placement: "top",
           }}
           className="flex w-fit max-w-[90vw] overflow-hidden rounded-md border border-muted bg-background shadow-xl"
         >
-          {/* <Separator orientation="vertical" />
+          <Separator orientation="vertical" />
           <NodeSelector open={openNode} onOpenChange={setOpenNode} />
-          <Separator orientation="vertical" /> */}
-          {/* <LinkSelector open={openLink} onOpenChange={setOpenLink} /> */}
+          <Separator orientation="vertical" />
+
+          <LinkSelector open={openLink} onOpenChange={setOpenLink} />
           <Separator orientation="vertical" />
           <TextButtons />
           <Separator orientation="vertical" />
-          {/* <ColorSelector open={openColor} onOpenChange={setOpenColor} /> */}
-        </EditorBubble>
+          <ColorSelector open={openColor} onOpenChange={setOpenColor} />
+        </EditorBubble> */}
       </EditorContent>
     </EditorRoot>
   );

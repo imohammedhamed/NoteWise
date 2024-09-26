@@ -134,33 +134,32 @@ export const ColorSelector = ({ open, onOpenChange }: ColorSelectorProps) => {
           <div className="my-1 px-2 text-sm font-semibold text-muted-foreground">
             Color
           </div>
-            {TEXT_COLORS.map(({ name, color }, index) => (
+          {TEXT_COLORS.map(({ name, color }, index) => (
             <EditorBubbleItem
-                key={index}
-                onSelect={() => {
-                editor.chain().focus();
-
-                if (name === "Default") {
-                    editor.chain().setMark('textStyle', { color: '' }).run(); // Reset text color by unsetting the color attribute
-                } else {
-                    editor.chain().setMark('textStyle', { color }).run(); // Apply the selected color
-                }
-
-                onOpenChange(false); // Close the popover
-                }}
-                className="flex cursor-pointer items-center justify-between px-2 py-1 text-sm hover:bg-accent"
+              key={index}
+              onSelect={() => {
+                editor.commands.unsetColor();
+                name !== "Default" &&
+                  editor
+                    .chain()
+                    .focus()
+                    .setColor(color || "")
+                    .run();
+                onOpenChange(false);
+              }}
+              className="flex cursor-pointer items-center justify-between px-2 py-1 text-sm hover:bg-accent"
             >
-                <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <div
-                    className="rounded-sm border px-2 py-px font-medium"
-                    style={{ color }}
+                  className="rounded-sm border px-2 py-px font-medium"
+                  style={{ color }}
                 >
-                    A
+                  A
                 </div>
                 <span>{name}</span>
-                </div>
+              </div>
             </EditorBubbleItem>
-            ))}
+          ))}
         </div>
         <div>
           <div className="my-1 px-2 text-sm font-semibold text-muted-foreground">

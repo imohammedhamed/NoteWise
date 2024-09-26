@@ -14,7 +14,7 @@ export default async function FavoriteList({userId}:FavoriteListProps) {
                     {item.WorkingSpaces.map((Favorite,i)=>{
                         return (
                             (Favorite.favorite)?(
-                            <Link href={`/${userId}/${Favorite.slug}`} key={i} className=" py-1 flex justify-between items-center text-base font-semibold text-DarkPurple rounded-xl p-1.5 hover:bg-Purple100 cursor-pointer">
+                            <Link href={`/${userId}/${Favorite.slug}`} key={i} className=" py-1 flex justify-between items-center text-base font-semibold text-DarkPurple rounded-md p-1.5 hover:bg-Purple100 cursor-pointer">
                             {
                                 (Favorite.favorite) &&(
                                     Favorite.name
