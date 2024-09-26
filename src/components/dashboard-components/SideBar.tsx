@@ -35,13 +35,13 @@ export default async function SideBar() {
     const user = await getUniqueUser()
   return (
     <div>
-        <aside className="fixed top-0 left-0 z-40 bg-Bgwhite border-r border-DarkPurple/10 w-[19rem] h-screen overflow-y-auto px-5 py-7 lg:block hidden">
+        <aside className="fixed top-0 left-0 z-40 bg-transparent border-r border-DarkPurple/10 w-[19rem] h-screen overflow-y-auto px-5 py-7 lg:block hidden">
               <div className=" pb-7">
                 <UserAccountBtn
                 userId={user?.id}
                 />
                 <div className="pt-4">
-                  <Link href={`/${user?.id}`} className=" w-full flex justify-start items-center gap-2 p-1.5 rounded-md transition-all hover:bg-Purple100">
+                  <Link href={`/${user?.id}`} className=" w-full flex justify-start items-center gap-2 p-1.5 rounded-md transition-all hover:bg-Purple50">
                   <FaHouse className=" size-4 text-DarkPurple"/>
                   <p className="text-base font-bold text-DarkPurple">Home</p>
                   </Link>
@@ -58,7 +58,7 @@ export default async function SideBar() {
         </aside>
         <Sheet>
           <SheetTrigger asChild>
-            <FaAlignLeft className=" absolute top-[18px] left-2 ml-1 size-5 text-DarkPurple/50 cursor-pointer"/>
+            <FaAlignLeft className=" absolute top-[18px] left-2 ml-1 size-5 text-DarkPurple/50 cursor-pointer lg:hidden md:hidden block"/>
           </SheetTrigger>
           <SheetContent side={"left"} className="max-h-screen overflow-y-auto">
               <SheetHeader>
