@@ -4,13 +4,13 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import {
   Form,
-  FormControl,
   FormField,
   FormItem,
-  FormMessage,
 } from "@/components/ui/form";
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { Editor } from "novel";
+import { JSONContent } from '@tiptap/react';
 
 interface UserNoteBodyInputProps {
   UserNoteBody: string;
@@ -23,11 +23,7 @@ export default function UserNoteBodyInput({
 }: UserNoteBodyInputProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-  const [NoteBody, setNoteBody] = useState(UserNoteBody || "");
-  const [typingTimeout, setTypingTimeout] = useState<NodeJS.Timeout | null>(
-    null
-  );
-  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+  // const [typingTimeout, setTypingTimeout] = useState<NodeJS.Timeout | null>(null);
 
   const formSchema = z.object({
     NoteBody: z.string(),
@@ -36,23 +32,22 @@ export default function UserNoteBodyInput({
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      NoteBody: NoteBody,
+      NoteBody:  UserNoteBody,
     },
   });
 
   const saveNote = useCallback(
-    async (noteContent: string) => {
+    async (noteContent: JSONContent) => {
       try {
-        if (noteContent.trim() === "") return;
+        if (!noteContent.content || noteContent.content.length === 0) return;
         setLoading(true);
         const response = await fetch("/api/write-note-body", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ id: UserNoteId, NoteBody: noteContent }),
+          body: JSON.stringify({ id: UserNoteId, NoteBody: JSON.stringify(noteContent) }),
         });
         if (response.ok) {
-          setNoteBody(noteContent);
-          router.refresh();
+          router.refresh(); 
         }
       } catch (error) {
         console.error("Error saving the note:", error);
@@ -63,42 +58,19 @@ export default function UserNoteBodyInput({
     [UserNoteId, router]
   );
 
-  const handleEditorChange = (content: string) => {
-    form.setValue("NoteBody", content);
-
-    if (typingTimeout) {
-      clearTimeout(typingTimeout);
-    }
-
-    setTypingTimeout(
-      setTimeout(() => {
-        saveNote(content);
-      }, 5000)
-    );
+  const handleEditorUpdate = (editorInstance: any) => {
+    const content = editorInstance.getJSON();
+    form.setValue("NoteBody", JSON.stringify(content));
   };
 
-  const handleTextareaResize = () => {
-    if (textareaRef.current) {
-      textareaRef.current.style.height = 'auto'; // Reset height to auto to calculate new height
-      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`; // Set height to scrollHeight
-    }
+  const handleDebouncedUpdate = (editorInstance: any) => {
+    const content = editorInstance.getJSON();
+    saveNote(content);  
   };
 
-  useEffect(() => {
-    handleTextareaResize(); // Adjust height when component mounts or content changes
-  }, [NoteBody]);
-
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      saveNote(form.getValues("NoteBody"));
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, [form, saveNote]);
+  const initialContent: JSONContent = UserNoteBody 
+    ? JSON.parse(UserNoteBody) 
+    : { type: 'doc', content: [{ type: 'paragraph' }] };
 
   return (
     <Form {...form}>
@@ -107,21 +79,15 @@ export default function UserNoteBodyInput({
           control={form.control}
           name="NoteBody"
           render={({ field }) => (
-            <FormItem className="relative">
-              <FormControl>
-                <textarea
-                  {...field}
-                  ref={textareaRef}
-                  disabled={loading}
-                  className="text-base p-5 text-DarkPurple font-medium w-full border-none bg-transparent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-transparent resize-none overflow-hidden"
-                  placeholder={`Write something...`}
-                  onInput={(e) => {
-                    handleEditorChange((e.target as HTMLTextAreaElement).value); 
-                    handleTextareaResize();
-                  }}
-                  style={{ minHeight: 'auto' }} 
-                />
-              </FormControl>
+            <FormItem>
+              <Editor 
+                className="px-5 bg-none w-full"
+                defaultValue={initialContent}
+                disableLocalStorage={true}
+                onUpdate={handleEditorUpdate}
+                onDebouncedUpdate={handleDebouncedUpdate}
+                debounceDuration={5000} 
+              />
             </FormItem>
           )}
         />

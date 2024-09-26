@@ -24,7 +24,7 @@ export async function POST(req: Request) {
     if (!NoteTableId) {
       return NextResponse.json({ message: "User ID is required" }, { status: 400 });
     }
-    const NoteTitle = "Untitled";
+    const NoteTitle = "Untitled Note";
     const slug = generateSlug(NoteTitle);
     // console.log("Generated slug:", slug);
 

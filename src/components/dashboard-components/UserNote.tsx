@@ -11,13 +11,14 @@ interface UserNoteProps{
 }
 export default function UserNote({UserNoteTitle,UserNoteBody,UserNoteId,WorkingSpaceSlug,UserId}:UserNoteProps) {
   return (
-    <MaxWContainer className=" relative mt-36 space-y-5">
-      <UserNoteTitleInput
+    <MaxWContainer className=" relative mt-16 space-y-5">
+      {/* <UserNoteTitleInput
         UserNoteTitle={UserNoteTitle}
         UserNoteId={UserNoteId}
         WorkingSpaceSlug={WorkingSpaceSlug}
         UserId={UserId}
       />
+      <div className=" border-t border-LightPurple mx-5"/> */}
       <UserNoteBodyInput
         UserNoteId={UserNoteId}
         UserNoteBody={UserNoteBody}

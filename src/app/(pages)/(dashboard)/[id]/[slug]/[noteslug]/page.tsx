@@ -75,14 +75,14 @@ export default async function page({ params }: { params: { noteslug: string } })
         <header className=' w-full p-3 border-b border-DarkPurple/10'>
           <span className="w-full flex justify-between items-center px-6">
             <UserNotesRenameBtn
-              InitialUserNoteName={UserNoteData?.title || "Untitled"}
+              InitialUserNoteName={UserNoteData?.title || "Untitled Note"}
               UserNoteId={UserNoteData?.id}
               WorkingSpaceSlug={getWorkingSpaceSlug.slug}
               UserId={getUserId?.id}
             />
             <UserNotesDeleteBtn
               UserNoteId={UserNoteData?.id}
-              UserNoteName={UserNoteData?.title||"Untitled"}
+              UserNoteName={UserNoteData?.title||"Untitled Note"}
               UserNoteTableId={UserNoteData?.notesTableId}
               WorkingSpaceSlug={getWorkingSpaceSlug.slug}
               UserId={getUserId?.id}
@@ -94,25 +94,25 @@ export default async function page({ params }: { params: { noteslug: string } })
             UserId={getUserId?.id}
             UserNoteSlug={UserNoteData?.slug||"new-note"}
             WorkingSpaceSlug={getWorkingSpaceSlug.slug||"new-working-space"}
-            UserNoteTitle={UserNoteData?.title|| "Untitled"}
+            UserNoteTitle={UserNoteData?.title|| "Untitled Note"}
             WorkingSpaceName={getWorkingSpaceSlug.name}
             UserNoteTableName={UserUniqueTableData?.name||"New Table"}
           />
           <MaxWContainer className=" relative my-14">
             <UserNote
-              UserNoteTitle={UserNoteData?.title || "Untitled"}
-              UserNoteBody={UserNoteData?.body || "Write Something "}
+              UserNoteTitle={UserNoteData?.title || "Untitled Note"}
+              UserNoteBody={UserNoteData?.body || ""}
               UserNoteId={UserNoteData?.id}
               WorkingSpaceSlug={getWorkingSpaceSlug.slug}
               UserId={getUserId?.id}
             />
-            <ChatNote
-              UserNoteTitle={UserNoteData?.title || "Untitled"}
-              UserNoteBody={UserNoteData?.body || "Write Something "}
+            {/* <ChatNote
+              UserNoteTitle={UserNoteData?.title || "Untitled Note"}
+              UserNoteBody={UserNoteData?.body || ""}
               UserNoteId={UserNoteData?.id}
               WorkingSpaceSlug={getWorkingSpaceSlug.slug}
               UserId={getUserId?.id}
-            />
+            /> */}
           </MaxWContainer>
       </div>
     )

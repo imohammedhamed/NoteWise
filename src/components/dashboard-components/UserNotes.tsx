@@ -30,12 +30,12 @@ export default async function UserNotes({
         UserNotes?.map((note) => (
           <Link
             href={`/${userId}/${WorkingSpaceSlug}/${note.slug}`}
-            key={note.slug} // Assuming `note.slug` is unique
-            className="group relative lg:w-[315px] w-full h-48 overflow-hidden flex flex-col justify-start items-start gap-3 p-5 bg-Purple50 rounded-xl border border-solid border-DarkPurple/10 transition-all hover:scale-95 hover:bg-LightPurple/10"
+            key={note.slug} 
+            className="group relative lg:w-[315px] w-full h-48 overflow-hidden flex flex-col justify-start items-start gap-3 p-5 bg-transparent rounded-xl border border-solid border-DarkPurple/10 transition-all hover:scale-95 hover:bg-LightPurple/10"
           >
-            <p className="text-base font-bold text-DarkPurple">{note.title}</p>
-            <p className="text-sm font-extrabold bg-gradient-to-b from-DarkPurple/50 to-Purple50 bg-clip-text text-transparent h-40 overflow-hidden">{note.body}</p>
-            <p className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-base font-bold text-Purple50 bg-DarkPurple/30 w-full h-full flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <p className="text-lg font-bold text-DarkPurple">{note.title}</p>
+            {/* <p className="text-sm font-extrabold bg-gradient-to-b from-DarkPurple/50 to-Purple50 bg-clip-text text-transparent h-40 overflow-hidden">{note.body}</p> */}
+            <p className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-base font-bold text-Bgwhite bg-LightPurple w-full h-full flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
               Open
             </p>
           </Link>
