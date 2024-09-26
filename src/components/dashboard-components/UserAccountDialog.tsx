@@ -104,7 +104,7 @@ export default function UserAccountDialog({
           </div>
         </Button>
       </DialogTrigger>
-      <DialogContent className="lg:w-[525px] w-[350px] rounded-xl">
+      <DialogContent className="lg:w-[525px] w-[350px]">
         <DialogHeader>
           <DialogTitle className="border-b text-start border-DarkPurple/10 pb-3">My profile</DialogTitle>
         </DialogHeader>
