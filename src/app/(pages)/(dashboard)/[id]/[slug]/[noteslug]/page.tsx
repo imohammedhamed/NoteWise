@@ -106,13 +106,13 @@ export default async function page({ params }: { params: { noteslug: string } })
               WorkingSpaceSlug={getWorkingSpaceSlug.slug}
               UserId={getUserId?.id}
             />
-            {/* <ChatNote
+            <ChatNote
               UserNoteTitle={UserNoteData?.title || "Untitled Note"}
               UserNoteBody={UserNoteData?.body || ""}
               UserNoteId={UserNoteData?.id}
               WorkingSpaceSlug={getWorkingSpaceSlug.slug}
               UserId={getUserId?.id}
-            /> */}
+            />
           </MaxWContainer>
       </div>
     )
