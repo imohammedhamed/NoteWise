@@ -24,7 +24,7 @@ export default async function UserWorkingSpaceListCards({UserId}:UserWorkingSpac
                       (
                         item.WorkingSpaces.map((card,i)=>{
                           return(
-                            <div key={i} className=" hover:scale-95 transition-all lg:w-[420px] w-[350px] h-48 rounded-xl pt-5 bg-transparent border border-solid border-DarkPurple/20 flex flex-col justify-start items-start flex-shrink-0 gap-2">
+                            <div key={i} className=" hover:scale-95 transition-all lg:w-[420px] w-full h-48 rounded-xl pt-5 bg-transparent border border-solid border-DarkPurple/20 flex flex-col justify-start items-start flex-shrink-0 gap-2">
                                 <Link href={`/${UserId}/${card.slug}`} className="w-full h-full px-5">
                                 <p className=" text-lg text-DarkPurple font-bold text-wrap">{card.name}</p>
                                 </Link>
