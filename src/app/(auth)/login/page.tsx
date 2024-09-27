@@ -101,7 +101,7 @@ export default function LogInPage() {
                 )}
               />
               <br />
-              <Button type="submit" disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md"></span> :`Log In`}</Button>
+              <Button disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md"></span> :`Log In`}</Button>
               <p className='text-xs lg:text-sm text-DarkBlue font-semibold p-2'>
                 IF YOU {`DON'T`} HAVE AN ACCOUNT <Link href='/signup' className=' text-Purple700 hover:underline'>SIGN UP</Link>
               </p>

@@ -51,7 +51,7 @@ export default function ChatNote({UserNoteTitle,UserNoteBody,UserNoteId,WorkingS
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline" className=" fixed bottom-5 right-5 border-none rounded-full bg-Purple300"><FaRegComments className=" lg:size-8 size-6 text-Purple700"/></Button>
+        <Button variant="outline" className=" fixed bottom-5 right-5 lg:bottom-10 lg:right-10 border-Purple300 rounded-full"><FaRegComments className=" lg:size-8 size-6 text-Purple700"/></Button>
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm mb-10 mt-5">

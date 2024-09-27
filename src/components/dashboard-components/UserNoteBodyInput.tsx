@@ -81,7 +81,7 @@ export default function UserNoteBodyInput({
           render={({ field }) => (
             <FormItem>
               <Editor 
-                className="px-5 bg-none w-full"
+                className="bg-none w-full"
                 defaultValue={initialContent}
                 disableLocalStorage={true}
                 onUpdate={handleEditorUpdate}
