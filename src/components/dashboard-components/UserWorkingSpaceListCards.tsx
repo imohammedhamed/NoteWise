@@ -13,7 +13,7 @@ export default async function UserWorkingSpaceListCards({UserId}:UserWorkingSpac
       {
         getWorkingSpaceList?.map((item,i)=>{
           return (
-              <div key={i} className=" w-full flex justify-start items-center overflow-x-auto lg:gap-5 gap-2 scrollbarWidth p-5 rounded-xl bg-DarkPurple/5">
+              <div key={i} className="w-full py-2 flex justify-start items-center flex-wrap flex-grow lg:gap-5 gap-3 ">
                   {
                     (item.WorkingSpaces.length===0)?
                       (
@@ -24,11 +24,11 @@ export default async function UserWorkingSpaceListCards({UserId}:UserWorkingSpac
                       (
                         item.WorkingSpaces.map((card,i)=>{
                           return(
-                            <div key={i} className=" hover:scale-95 transition-all lg:w-[350px] w-[300px] h-48 rounded-xl pt-5 bg-Purple50 border border-solid border-DarkPurple/20 flex flex-col justify-start items-start flex-shrink-0 gap-2">
+                            <div key={i} className=" hover:scale-95 transition-all lg:w-[420px] w-[350px] h-48 rounded-xl pt-5 bg-transparent border border-solid border-DarkPurple/20 flex flex-col justify-start items-start flex-shrink-0 gap-2">
                                 <Link href={`/${UserId}/${card.slug}`} className="w-full h-full px-5">
                                 <p className=" text-lg text-DarkPurple font-bold text-wrap">{card.name}</p>
                                 </Link>
-                                <p className=" bg-LightPurple/10 rounded-b-xl w-full h-10 flex justify-end items-center gap-2 px-5 py-2">
+                                <p className=" bg-Purple100 rounded-b-xl w-full h-10 flex justify-end items-center gap-2 px-5 py-2">
                                     <DeleteWorkSpaceBtn
                                         workingSpaceId={card.id}
                                         userId={UserId} 
