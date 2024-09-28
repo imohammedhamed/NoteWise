@@ -27,7 +27,6 @@ export default function Navbar() {
       animate={{ y:0 , opacity:1 }}
       transition={{ease:"linear",duration:0.6,delay:0.3}}
     >
-    <TopBanner/>
       <motion.header 
         className=' p-3 bg-Bgwhite/50 border-b border-b-LightPurple/10'
         initial={{y: -60 , opacity: 0 }} 
