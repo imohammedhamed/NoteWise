@@ -30,15 +30,15 @@ export default async function UserWorkingSpaceListCards({UserId}:UserWorkingSpac
                                 </Link>
                                 <p className=" bg-Purple100 rounded-b-xl w-full h-10 flex justify-end items-center gap-2 px-5 py-2">
                                     <DeleteWorkSpaceBtn
-                                        workingSpaceId={card.id}
-                                        userId={UserId} 
-                                        initialWorkingSpaceName={card.name}
-                                        className=" size-5"
+                                      workingSpaceId={card.id}
+                                      userId={UserId} 
+                                      initialWorkingSpaceName={card.name}
+                                      className=" size-5"
                                     />
                                     <FavoriteBtn
-                                        favorite={card.favorite}
-                                        workspaceId={card.id}
-                                        className=" size-6"
+                                      favorite={card.favorite}
+                                      workspaceId={card.id}
+                                      className=" size-6"
                                     />
                                 </p>
                             </div>
