@@ -22,14 +22,14 @@ export default function Navbar() {
         
   return (
     <motion.div 
-      className="fixed top-0 w-full z-50" 
+      className="fixed top-0 w-full z-50 backdrop-blur" 
       initial={{y: -60 , opacity: 0 }} 
       animate={{ y:0 , opacity:1 }}
       transition={{ease:"linear",duration:0.6,delay:0.3}}
     >
     <TopBanner/>
       <motion.header 
-        className=' p-3 bg-Bgwhite/70 backdrop-blur border-b border-b-LightPurple/10'
+        className=' p-3 bg-Bgwhite/50 border-b border-b-LightPurple/10'
         initial={{y: -60 , opacity: 0 }} 
         animate={{ y:0 , opacity:1 }}
         transition={{ease:"linear"}}
