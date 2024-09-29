@@ -25,7 +25,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: "User ID is required" }, { status: 400 });
     }
 
-    const workspaceName = "New Working Space";
+    const workspaceName = "Untitled Working Space";
     const slug = generateSlug(workspaceName);
 
     let uniqueSlug = slug;
@@ -48,7 +48,7 @@ export async function POST(req: Request) {
     return NextResponse.json(newWorkingSpace, { status: 201 });
 
   } catch (error: unknown | any) {
-    console.error("Error adding new working space:", error);
+    console.error("Error adding Untitled Working Space:", error);
     return NextResponse.json(
       { message: "Internal Server Error", error: error.message },
       { status: 500 }

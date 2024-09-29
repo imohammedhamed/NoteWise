@@ -79,15 +79,16 @@ export default function UserNoteBodyInput({
           control={form.control}
           name="NoteBody"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className=" relative">
               <Editor 
                 className="bg-none w-full"
                 defaultValue={initialContent}
                 disableLocalStorage={true}
                 onUpdate={handleEditorUpdate}
                 onDebouncedUpdate={handleDebouncedUpdate}
-                debounceDuration={5000} 
+                debounceDuration={1000} 
               />
+              <span className=" border border-LightPurple/20 rounded-md px-2 py-1 absolute top-0 right-0 lg:text-sm text-xs font-semibold text-LightPurple">{ loading ? "Saving..." : "Saved"}</span>
             </FormItem>
           )}
         />
