@@ -29,7 +29,7 @@ export default function AddNewTable({className,workingSpaceId}:AddNewTableProps)
         } catch (error) {
             toast.error("Something went wrong. Please try again later")
         }finally{
-        setLoading(false)
+            setLoading(false)
         }
     }
   return (

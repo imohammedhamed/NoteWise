@@ -2,15 +2,21 @@ import { testimonials } from "../../lib/data"
 import MaxWContainer from "../ui/MaxWContainer"
 import Section from "../ui/Section"
 import SectionHeading from "./SectionHeading"
+import { FaQuoteLeft } from "react-icons/fa6";
+import { FaQuoteRight } from "react-icons/fa6";
+
 export default function Testimonials() {
   return (
     <Section sectionId="testimonials">
-        <MaxWContainer>
+        <MaxWContainer className=" relative">
+            <span className=" absolute top-32 -left-24 -rotate-12 text-Purple700/50 blur-md -z-20">
+                <FaQuoteLeft className="size-80"/>
+            </span>
             <SectionHeading
             SectionTitle = "Testimonials"
             SectionSubTitle="What our users have been saying."
             />
-            <div className=" container lg:grid lg:grid-cols-3 flex overflow-x-auto  gap-5">
+            <div className=" container lg:grid lg:grid-cols-3 flex py-5 overflow-x-auto  gap-5">
                 {
                     testimonials.map(item => {
                         return(

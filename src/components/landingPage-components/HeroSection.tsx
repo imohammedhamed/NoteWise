@@ -13,7 +13,7 @@ export default function HeroSection() {
         whileInView={{y:0,opacity:1}}
         transition={{ease:"easeInOut",duration:0.7,delay:0.2}}
         viewport={{ once: true, amount: 0.5 }}
-        className=" min-h-[80vh] mt-48 flex justify-center items-center w-full">
+        className=" min-h-[80vh] lg:mt-48 mt-20 flex justify-center items-center w-full">
         <MaxWContainer className="*:text-center relative px-4">
         <h1 className=" lg:text-5xl text-2xl font-semibold pb-5">Take Notes to the Next Level with <br /> <span className=" border-b-[5px] border-Purple700">AI-Powered</span> Conversations</h1>
         <p className=" lg:text-xl text-base font-medium">Interact with Your Notes Like Never Before. <br /> Organize, Discuss, and Enhance Your Ideas Seamlessly.</p>
