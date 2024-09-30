@@ -92,8 +92,8 @@ export default async function page({ params }: { params: { noteslug: string } })
         </header>
           <BreadcrumbDemo
             UserId={getUserId?.id}
-            UserNoteSlug={UserNoteData?.slug||"new-note"}
-            WorkingSpaceSlug={getWorkingSpaceSlug.slug||"new-working-space"}
+            UserNoteSlug={UserNoteData?.slug||"untitled-note"}
+            WorkingSpaceSlug={getWorkingSpaceSlug.slug||"untitled-working-space"}
             UserNoteTitle={UserNoteData?.title|| "Untitled Note"}
             WorkingSpaceName={getWorkingSpaceSlug.name}
             UserNoteTableName={UserUniqueTableData?.name||"New Table"}
