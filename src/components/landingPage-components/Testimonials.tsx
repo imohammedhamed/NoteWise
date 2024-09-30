@@ -13,7 +13,7 @@ export default function Testimonials() {
                 <FaQuoteLeft className="size-80"/>
             </span>
             <span className=" absolute bottom-0 -right-24 -rotate-12 text-Purple700/50 blur-md -z-20 hidden lg:block">
-                <FaQuoteRight className="size-80"/>
+                <FaQuoteRight className="size-44"/>
             </span>
             <SectionHeading
             SectionTitle = "Testimonials"

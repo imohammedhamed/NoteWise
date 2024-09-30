@@ -28,7 +28,7 @@ export default function Navbar() {
       transition={{ease:"linear",duration:0.6,delay:0.3}}
     >
       <motion.header 
-        className=' p-3 bg-Bgwhite/50 border-b border-b-LightPurple/10'
+        className=' p-3 bg-Bgwhite/70 border-b border-b-LightPurple/10'
         initial={{y: -60 , opacity: 0 }} 
         animate={{ y:0 , opacity:1 }}
         transition={{ease:"linear"}}
@@ -47,7 +47,7 @@ export default function Navbar() {
             </ul>
           </div>
           <div className=" flex justify-center items-center gap-3">
-          <Button><Link href="/signup" className=" text-sm font-medium">Get Started for Free</Link></Button>
+          <Button variant="default"><Link href="/signup" className=" text-sm font-medium">Get Started for Free</Link></Button>
           <Button variant="ghost"><Link href="/login" className=" text-sm font-medium">log in</Link></Button>
           </div>
         </div>

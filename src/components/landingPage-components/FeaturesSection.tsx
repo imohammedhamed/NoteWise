@@ -5,7 +5,7 @@ import Section from "../ui/Section"
 import Image from "next/image"
 export default function FeaturesSection() {
   return (
-        <Section sectionId="features">
+        <Section sectionId="features" className=" bg-gradient-to-b from-Bgwhite via-Purple200 to-Bgwhite">
         <MaxWContainer>
             <SectionHeading
             SectionTitle = "Features"
@@ -16,11 +16,8 @@ export default function FeaturesSection() {
                     features.map(item =>{
                         return(
                             <div key={item.id} className=" w-full flex justify-center items-center">
-                                <div className=" space-y-3 flex flex-col justify-center items-start p-6 bg-Purple50 border border-solid border-LightPurple rounded-xl w-full h-max lg:w-[800px] lg:h-36">
-                                    <span className=" flex justify-center items-center gap-3">
-                                    <Image src={item.imgSrc} alt="about img" width={35} height={35} className=" mb-1.5"/>
+                                <div className=" space-y-3 flex flex-col justify-start items-start p-5 bg-Bgwhite/70 backdrop-blur border border-solid border-LightPurple rounded-xl w-full h-max lg:w-[800px] lg:h-36">
                                     <h3 className=" pb-2 text-lg text-DarkPurple font-bold ">{item.Title}</h3>
-                                    </span>
                                     <p className=" text-base text-DarkPurple/50 font-bold">{item.Body}</p>
                                 </div>
                             </div> 
