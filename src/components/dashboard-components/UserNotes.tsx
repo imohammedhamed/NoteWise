@@ -49,7 +49,7 @@ export default async function UserNotes({
                 defaultValue={initializeContent(note.body)}
                 disableLocalStorage={true}
               /> */}
-            <p className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-base font-bold text-Bgwhite bg-LightPurple w-full h-full flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <p className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-base font-bold text-white bg-LightPurple w-full h-full flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
               Open
             </p>
           </Link>

@@ -28,7 +28,7 @@ export default function Navbar() {
       transition={{ease:"linear",duration:0.6,delay:0.3}}
     >
       <motion.header 
-        className=' p-3 bg-Bgwhite/70 border-b border-b-LightPurple/10'
+        className=' p-3 bg-white/70 border-b border-b-LightPurple/10'
         initial={{y: -60 , opacity: 0 }} 
         animate={{ y:0 , opacity:1 }}
         transition={{ease:"linear"}}
