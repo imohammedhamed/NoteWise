@@ -82,7 +82,7 @@ export const testimonials =[
         id:"1",
         Title:"John Smith",
         Body:"NoteWise has completely transformed the way I take and manage notes. The AI interaction feature is a game-changer, making it easy to organize and retrieve information quickly.",
-        Color:"Bgwhite",
+        Color:"white",
     },
     {
         id:"2",
@@ -106,7 +106,7 @@ export const testimonials =[
         id:"5",
         Title:"Jessica Wilson",
         Body:"NoteWise has become an indispensable tool for my research projects. The ability to interact with my notes and get relevant insights is amazing.",
-        Color:"Bgwhite",
+        Color:"white",
     },
     {
         id:"6",
@@ -130,13 +130,13 @@ export const testimonials =[
         id:"9",
         Title:"Robert Lee",
         Body:"NoteWise has enhanced my productivity by allowing me to interact with my notes. It's the smartest way to keep track of information and ideas.",
-        Color:"Bgwhite",
+        Color:"white",
     },
     {
         id:"10",
         Title:"Maria Rodriguez",
         Body:"NoteWise's clean interface and powerful features make it a joy to use. I can't imagine going back to traditional note-taking methods.",
-        Color:"Bgwhite",
+        Color:"white",
     },
     
 ] as const 

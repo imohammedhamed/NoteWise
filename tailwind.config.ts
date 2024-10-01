@@ -22,7 +22,7 @@ const config = {
       Red700:"#b91c1c",
       Gray400:"#9ca3af",
       Dark:"#030712",
-      Bgwhite:"rgb(255 255 255)",
+      white:"rgb(255,255,255)",
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",
       ring: "hsl(var(--ring))",
