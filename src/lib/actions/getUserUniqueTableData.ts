@@ -6,13 +6,11 @@ export default async function getUserUniqueTableData(
   UserNoteId: string | undefined
 ) {
   try {
-    // Check if UserNotesTableId is provided
     if (!UserNotesTableId) {
       console.error("Invalid userId: userId is null or undefined.");
       return null;
     }
 
-    // Fetch data from Prisma
     const UserUniqueTableData = await prisma.notesTable.findUnique({
       where: {
         id: UserNotesTableId,
@@ -20,17 +18,16 @@ export default async function getUserUniqueTableData(
       include: {
         notes: {
           where: {
-            slug: UserNoteSlug, // Filter notes by the unique slug
+            slug: UserNoteSlug, 
             id:UserNoteId
           },
         },
       },
     });
 
-    // Return the fetched data
     return UserUniqueTableData;
   } catch (error) {
     console.error("Error fetching user unique table data:", error);
-    return null; // Return null or an appropriate value to indicate failure
+    return null; 
   }
 }

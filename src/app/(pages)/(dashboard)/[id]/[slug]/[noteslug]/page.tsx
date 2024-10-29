@@ -10,7 +10,7 @@ import getUserSession from "@/lib/actions/getUserSession";
 import getUserUniqueTableData from "@/lib/actions/getUserUniqueTableData";
 import UserNote from "@/components/dashboard-components/UserNote";
 import ChatNote from "@/components/dashboard-components/ChatNote";
-const getUserInfo =cache(async (params: { noteslug: string })=>{
+const getUserInfo = cache(async (params: { noteslug: string })=>{
   try {
     const UserNoteData = await prisma.note.findUnique({
       where:{
@@ -72,7 +72,7 @@ export default async function page({ params }: { params: { noteslug: string } })
     const UserUniqueTableData = await getUserUniqueTableData(UserNoteData?.notesTableId||"Null",UserNoteData?.slug||"null",UserNoteData?.id)
     return (
       <div>
-        <header className=' w-full p-3 border-b border-DarkPurple/10'>
+        <header className=' w-full p-3 border-b border-DarkNeutral/10'>
           <span className="w-full flex justify-between items-center px-6">
             <UserNotesRenameBtn
               InitialUserNoteName={UserNoteData?.title || "Untitled Note"}

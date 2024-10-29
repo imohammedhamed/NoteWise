@@ -47,4 +47,4 @@ export default function NotesTableDeleteBtn({NoteTableName,NoteTableId}:NotesTab
     </Button>
   )
 }
-//<span className=" absolute top-0 right-2 loading loading-infinity loading-md text-DarkPurple/20"></span>
+//<span className=" absolute top-0 right-2 loading loading-infinity loading-md text-DarkNeutral/20"></span>

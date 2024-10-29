@@ -109,7 +109,7 @@ export default function UserNoteTitleInput({
               <FormControl>
                 <Input
                   {...field}
-                  className="lg:text-4xl text-lg text-wrap h-14 text-DarkPurple font-bold w-full border-none bg-transparent focus-visible:ring-transparent"
+                  className="lg:text-4xl text-lg text-wrap h-14 text-DarkNeutral font-bold w-full border-none bg-transparent focus-visible:ring-transparent"
                   placeholder={NoteName}
                   type="text"
                   onInput={handleInputChange} // Handle debounced input

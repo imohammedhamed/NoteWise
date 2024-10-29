@@ -37,7 +37,6 @@ export default async function page({ params }: { params: { slug: string } }) {
         initialWorkingSpaceName={UserworkingSpaceInfo?.name} 
         Favorite={UserworkingSpaceInfo?.favorite||null} 
       />
-      <UserWorkingSpaceFolderBanner/>
       <AddNewTable 
         workingSpaceId={UserworkingSpaceInfo?.id}
         className="fixed lg:bottom-10 lg:right-10 bottom-5 right-5 z-40"

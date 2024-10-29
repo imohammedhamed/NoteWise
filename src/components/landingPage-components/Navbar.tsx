@@ -28,14 +28,14 @@ export default function Navbar() {
       transition={{ease:"linear",duration:0.6,delay:0.3}}
     >
       <motion.header 
-        className=' p-3 bg-white/70 border-b border-b-LightPurple/10'
+        className=' p-3 bg-brand_secondary/70 border-b border-b-brand_tertiary'
         initial={{y: -60 , opacity: 0 }} 
         animate={{ y:0 , opacity:1 }}
         transition={{ease:"linear"}}
       >
         <div className=' container mx-auto flex justify-between items-center'>
           <div className=" flex justify-center items-center">
-            <Link href="/" className=" text-3xl font-bold text-DarkPurple pr-5"> <Image src={imgsrc} alt="NoteWise Logo" priority width={50} height={50} /> </Link>
+            <Link href="/" className=" text-3xl font-bold text-brand_primary pr-5"> <Image src={imgsrc} alt="NoteWise Logo" priority width={50} height={50} /> </Link>
             <ul className=" hidden lg:flex">
             {
               NavLinks.map((link,i)=>{

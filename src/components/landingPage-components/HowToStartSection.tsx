@@ -17,10 +17,10 @@ export default function HowToStartSection() {
                     HowToStartSteps.map(step =>{
                         return(
                             <div key={step.id} className=" flex justify-center items-start ">
-                                <div className=" py-4 border-t border-Purple700 h-max w-72">
-                                <span className=" font-bold text-xs text-Purple700">{step.StepNum}</span>
-                                <h3 className=" py-1 text-xl text-DarkPurple font-semibold">{step.Title}</h3>
-                                <p className=" text-base text-DarkPurple/50 ">{step.Body}</p>
+                                <div className=" py-4 border-t border-brand_primary h-max w-72">
+                                <span className=" font-bold text-xs text-brand_primary">{step.StepNum}</span>
+                                <h3 className=" py-1 text-xl text-brand_primary font-semibold">{step.Title}</h3>
+                                <p className=" text-base text-brand_primary/70 ">{step.Body}</p>
                                 </div>
                             </div>
                         )

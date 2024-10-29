@@ -28,9 +28,9 @@ export default function SignOutDialog() {
                 <div className=" w-full flex justify-between items-center">          
                     <span className=" w-full flex flex-col justify-center items-start">
                     <p className=" text-base font-semibold text-Red700">SignOut</p>
-                    <p className=" lg:text-sm text-xs text-wrap text-start font-bold text-DarkPurple/50 ">Sign out of all other active sessions on other devices besides this one.</p>
+                    <p className=" lg:text-sm text-xs text-wrap text-start font-bold text-brand_primary/50 ">Sign out of all other active sessions on other devices besides this one.</p>
                     </span>
-                <FaAngleRight className="text-DarkPurple/50 size-4"/>
+                <FaAngleRight className="text-brand_primary/50 size-4"/>
                 </div>
           </Button>
       </AlertDialogTrigger>

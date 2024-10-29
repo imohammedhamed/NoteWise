@@ -61,11 +61,11 @@ export default function NotesTableRenameBtn({userId,NoteTableId,InitialNoteTable
             name="name"
             render={({ field }) => (
                 <FormItem className="relative">
-                    <FormLabel className=" text-sm font-bold text-DarkPurple"> Rename :</FormLabel>
+                    <FormLabel className=" text-sm font-bold text-DarkNeutral"> Rename :</FormLabel>
                 <FormControl>
                     <Input disabled={loading} className=" w-full" placeholder={`${NoteTableName} ...`} type="text" {...field} />
                 </FormControl>
-                {(loading)&&<span className=" absolute top-8 right-2 loading loading-infinity loading-md text-DarkPurple/20"></span>} 
+                {(loading)&&<span className=" absolute top-8 right-2 loading loading-infinity loading-md text-DarkNeutral/20"></span>} 
                 <FormMessage className=" text-Red700"/>
                 </FormItem>
             )}

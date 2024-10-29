@@ -73,7 +73,7 @@ export default function SignUpPage() {
         <MaxWContainer className=' flex justify-center items-center'>
           <GoBackBtn/>
             <BlurEffect className="top-10 left-10 w-32 h-[20rem] lg:h-[50rem]"/>
-            <div className="relative p-5 lg:p-10 md:p-10 rounded-xl bg-LightPurple/10 lg:w-[30rem] md:w-[30rem] w-max mt-10">
+            <div className="relative p-5 lg:p-10 md:p-10 rounded-xl bg-brand_tertiary lg:w-[30rem] md:w-[30rem] w-max mt-10">
             <WelcomeBan Welcome_to="Sign Up"/>
             <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
@@ -82,9 +82,9 @@ export default function SignUpPage() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-DarkPurple font-bold'>Name</FormLabel>
+                    <FormLabel className=' text-DarkNeutral font-bold'>Name</FormLabel>
                     <FormControl>
-                      <Input  className='text-DarkPurple' placeholder="Enter your name..." type='text' {...field} />
+                      <Input  className='text-DarkNeutral' placeholder="Enter your name..." type='text' {...field} />
                     </FormControl>
                     <FormMessage className='text-Red700'/>
                   </FormItem>
@@ -95,9 +95,9 @@ export default function SignUpPage() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-DarkPurple font-bold'>Email</FormLabel>
+                    <FormLabel className=' text-DarkNeutral font-bold'>Email</FormLabel>
                     <FormControl>
-                      <Input  className='text-DarkPurple' placeholder="Enter your email..." type='email' {...field} />
+                      <Input  className='text-DarkNeutral' placeholder="Enter your email..." type='email' {...field} />
                     </FormControl>
                     <FormMessage className='text-Red700'/>
                   </FormItem>
@@ -108,9 +108,9 @@ export default function SignUpPage() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-DarkPurple font-bold'>Password</FormLabel>
+                    <FormLabel className=' text-DarkNeutral font-bold'>Password</FormLabel>
                     <FormControl>
-                      <Input  className='text-DarkPurple' placeholder="Enter your password..." type='password' {...field} />
+                      <Input  className='text-DarkNeutral' placeholder="Enter your password..." type='password' {...field} />
                     </FormControl>
                     <FormMessage className='text-Red700'/>
                   </FormItem>
@@ -121,9 +121,9 @@ export default function SignUpPage() {
                 name="confirmPassword"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-DarkPurple font-bold'>confirm Password</FormLabel>
+                    <FormLabel className=' text-DarkNeutral font-bold'>confirm Password</FormLabel>
                     <FormControl>
-                      <Input  className='text-DarkPurple' placeholder="confirm your password..." type='password' {...field} />
+                      <Input  className='text-DarkNeutral' placeholder="confirm your password..." type='password' {...field} />
                     </FormControl>
                     <FormMessage className='text-Red700'/>
                   </FormItem>

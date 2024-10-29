@@ -67,7 +67,7 @@ export default function LogInPage() {
         <MaxWContainer className='flex justify-center items-center'>
           <GoBackBtn/>
             <BlurEffect className="top-10 left-10 w-32 h-[20rem] lg:h-[50rem]"/>
-            <div className="relative p-5 lg:p-10 md:p-10 rounded-xl bg-LightPurple/10 lg:w-[30rem] md:w-[30rem] w-max mt-10">
+            <div className="relative p-5 lg:p-10 md:p-10 rounded-xl bg-brand_tertiary lg:w-[30rem] md:w-[30rem] w-max mt-10">
             <WelcomeBan Welcome_to="Log In"/>
             <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2 ">
@@ -76,11 +76,11 @@ export default function LogInPage() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-DarkPurple font-bold'>Email</FormLabel>
+                    <FormLabel className=' text-brand_primary font-bold'>Email</FormLabel>
                     <FormControl>
-                      <Input  className='text-DarkPurple' placeholder="Enter your email..." type='email' {...field} />
+                      <Input  placeholder="Enter your email..." type='email' {...field} />
                     </FormControl>
-                    <FormMessage className='text-Red700'/>
+                    <FormMessage/>
                   </FormItem>
                 )}
               />
@@ -89,10 +89,10 @@ export default function LogInPage() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-DarkPurple font-bold'>Password</FormLabel>
+                    <FormLabel className=' text-brand_primary font-bold'>Password</FormLabel>
                     <FormControl>
                       <span  className=' relative'>
-                      <Input  className='text-DarkPurple' placeholder="Enter your password..." type={ishidden?'text':'password'} {...field} />
+                      <Input  placeholder="Enter your password..." type={ishidden?'text':'password'} {...field} />
                       <Button type='button' onClick={handleishidden} variant="outline" className=' border-none text-LightPurple absolute top-[1.6rem] right-1 h-8 px-3'>{ishidden?`hidden`:`show`}</Button>
                       </span>
                     </FormControl>
@@ -102,8 +102,8 @@ export default function LogInPage() {
               />
               <br />
               <Button disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md"></span> :`Log In`}</Button>
-              <p className='text-xs lg:text-sm text-DarkBlue font-semibold p-2'>
-                IF YOU {`DON'T`} HAVE AN ACCOUNT <Link href='/signup' className=' text-Purple700 hover:underline'>SIGN UP</Link>
+              <p className='text-xs lg:text-sm font-semibold p-2'>
+                IF YOU {`DON'T`} HAVE AN ACCOUNT <Link href='/signup' className=' text-brand_primary hover:underline'>SIGN UP</Link>
               </p>
             </form>
           </Form>

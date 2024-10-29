@@ -43,5 +43,5 @@ export default function DeleteWorkSpaceBtn({userId,workingSpaceId,initialWorking
         setLoading(false);
     }
   }
-  return <span>{loading?<FaRegTrashCan className={cn("text-DarkPurple/20",className)}/>:<FaRegTrashCan onClick={handleClick} className={cn("text-Purple700 cursor-pointer transition-all hover:scale-125",className)}/>}</span>
+  return <span>{loading?<FaRegTrashCan className={cn("text-brand_primary/20",className)}/>:<FaRegTrashCan onClick={handleClick} className={cn("text-brand_primary cursor-pointer transition-all hover:scale-125",className)}/>}</span>
 }

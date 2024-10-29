@@ -24,11 +24,11 @@ export default async function UserWorkingSpaceListCards({UserId}:UserWorkingSpac
                       (
                         item.WorkingSpaces.map((card,i)=>{
                           return(
-                            <div key={i} className=" hover:scale-95 transition-all lg:w-[420px] w-full h-48 rounded-xl pt-5 bg-transparent border border-solid border-DarkPurple/20 flex flex-col justify-start items-start flex-shrink-0 gap-2">
+                            <div key={i} className=" hover:scale-95 transition-all lg:w-[420px] w-full h-48 rounded-xl pt-5 bg-brand_tertiary border border-solid border-brand_primary/20 flex flex-col justify-start items-start flex-shrink-0 gap-2">
                                 <Link href={`/${UserId}/${card.slug}`} className="w-full h-full px-5">
-                                <p className=" text-lg text-DarkPurple font-bold text-wrap">{card.name}</p>
+                                <p className=" text-lg text-brand_primary font-bold text-wrap">{card.name}</p>
                                 </Link>
-                                <p className=" bg-Purple100 rounded-b-xl w-full h-10 flex justify-end items-center gap-2 px-5 py-2">
+                                <p className="rounded-b-xl w-full h-10 flex justify-end items-center gap-2 px-5 py-3">
                                     <DeleteWorkSpaceBtn
                                       workingSpaceId={card.id}
                                       userId={UserId} 
