@@ -11,7 +11,7 @@ export default function UserNoteDropMenu({UserNoteId,UserNoteName}:UserNoteDropM
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <span className=" text-DarkPurple/50 p-1.5 rounded-md cursor-pointer hover:bg-DarkPurple/10">
+          <span className=" text-DarkNeutral/50 p-1.5 rounded-md cursor-pointer hover:bg-DarkNeutral/10">
             <BsThreeDots className="size-5" />
           </span>
         </DropdownMenuTrigger>

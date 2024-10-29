@@ -85,8 +85,8 @@ export default function ChangePasswordDialog({id,name,password}:ChangePasswordDi
         <DialogContent className="sm:min-w-[425px]">
           <DialogHeader className=" *:w-full *:text-center mb-7">
               <PiPasswordDuotone className=" text-Purple700 size-16"/>
-            <DialogTitle className=" text-DarkPurple text-2xl font-bold">Change password</DialogTitle>
-            <DialogDescription className=" text-sm font-bold text-DarkPurple/50">
+            <DialogTitle className=" text-brand_primary text-2xl font-bold">Change password</DialogTitle>
+            <DialogDescription className=" text-sm font-bold text-brand_primary/50">
               Use a password at least 6 characters long <br />
               with both letters and numbers.
             </DialogDescription>
@@ -98,7 +98,7 @@ export default function ChangePasswordDialog({id,name,password}:ChangePasswordDi
                 name="current_password"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel className=" text-DarkPurple font-bold">Enter your current password</FormLabel>
+                    <FormLabel className=" text-brand_primary font-bold">Enter your current password</FormLabel>
                     <FormControl>
                         <Input placeholder={`your current password :${newPassword}`} {...field} />
                     </FormControl>
@@ -111,7 +111,7 @@ export default function ChangePasswordDialog({id,name,password}:ChangePasswordDi
                 name="password"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel className=" text-DarkPurple font-bold">Enter a new password</FormLabel>
+                    <FormLabel className=" text-DarkNeutral font-bold">Enter a new password</FormLabel>
                     <FormControl>
                         <Input placeholder="new password..." {...field} />
                     </FormControl>
@@ -124,7 +124,7 @@ export default function ChangePasswordDialog({id,name,password}:ChangePasswordDi
                 name="confirmPassword"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel className=" text-DarkPurple font-bold">Confirm your new password</FormLabel>
+                    <FormLabel className=" text-DarkNeutral font-bold">Confirm your new password</FormLabel>
                     <FormControl>
                         <Input placeholder="Confirm password..." {...field} />
                     </FormControl>

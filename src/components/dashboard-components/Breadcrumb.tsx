@@ -20,8 +20,8 @@ interface BreadcrumbDemoProps{
 export function BreadcrumbDemo({UserId,UserNoteSlug,WorkingSpaceSlug,UserNoteTitle,WorkingSpaceName,UserNoteTableName}:BreadcrumbDemoProps) {
  // add aslug 
   return (
-    <div className="bg-transparent py-2 px-5">
-      <div className=' w-full flex justify-start items-center flex-grow gap-2 *:lg:text-sm *:text-xs *:text-DarkPurple/50 *:font-bold'>
+    <div className=" w-full bg-white py-2 px-5">
+      <div className=' w-full flex justify-start items-center flex-grow gap-2 *:lg:text-sm *:text-xs *:text-DarkNeutral/50 *:font-bold'>
         <Link href={`/${UserId}`} className='hover:text-Purple700 hover:underline'>Home</Link>
         <span>/</span>
         <Link href={`/${UserId}/${WorkingSpaceSlug}`} className='hover:text-Purple700 hover:underline lg:block hidden'>{WorkingSpaceName}</Link>

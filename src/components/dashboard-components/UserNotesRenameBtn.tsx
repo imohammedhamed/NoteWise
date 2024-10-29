@@ -65,7 +65,7 @@ export default function UserNotesRenameBtn({InitialUserNoteName,UserNoteId,Worki
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <p className=" text-DarkPurple text-base font-semibold p-1 rounded-md transition-all cursor-pointer text-nowrap overflow-hidden hover:bg-DarkPurple/5">{NoteName}</p>
+        <p className=" text-DarkNeutral text-base font-semibold p-1 rounded-md transition-all cursor-pointer text-nowrap overflow-hidden hover:bg-DarkNeutral/5">{NoteName}</p>
       </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">
           <Form {...form}>
@@ -75,11 +75,11 @@ export default function UserNotesRenameBtn({InitialUserNoteName,UserNoteId,Worki
                 name="name"
                 render={({ field }) => (
                     <FormItem className="relative">
-                        <FormLabel className=" text-sm font-bold text-DarkPurple"> Rename :</FormLabel>
+                        <FormLabel className=" text-sm font-bold text-DarkNeutral"> Rename :</FormLabel>
                     <FormControl>
                         <Input disabled={loading} className=" w-full" placeholder={`${NoteName} ...`} type="text" {...field} />
                     </FormControl>
-                    {(loading)&&<span className=" absolute top-8 right-2 loading loading-infinity loading-md text-DarkPurple/20"></span>} 
+                    {(loading)&&<span className=" absolute top-8 right-2 loading loading-infinity loading-md text-DarkNeutral/20"></span>} 
                     <FormMessage className=" text-Red700"/>
                     </FormItem>
                 )}

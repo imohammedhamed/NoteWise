@@ -72,9 +72,9 @@ export default function FavoriteBtn({favorite,workspaceId,className}:FavoriteBtn
         }
     }
     if(favorite){
-        return <span>{loading?<FaStar className={cn("text-DarkPurple/20",className)}/>:<FaStar onClick={handleRemoveFav} className={cn("text-Purple700 cursor-pointer transition-all hover:scale-125",className)}/>}</span>
+        return <span>{loading?<FaStar className={cn("text-brand_primary/20",className)}/>:<FaStar onClick={handleRemoveFav} className={cn("text-brand_primary cursor-pointer transition-all hover:scale-125",className)}/>}</span>
     }else{
-        return <span>{loading?<FaRegStar className={cn("text-DarkPurple/20",className)}/>:<FaRegStar onClick={handleAddFav} className={cn("text-Purple700 cursor-pointer transition-all hover:scale-125",className)}/>}</span>
+        return <span>{loading?<FaRegStar className={cn("text-brand_primary/20",className)}/>:<FaRegStar onClick={handleAddFav} className={cn("text-brand_primary cursor-pointer transition-all hover:scale-125",className)}/>}</span>
     }
 }
 

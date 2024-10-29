@@ -9,10 +9,10 @@ export default function Testimonials() {
   return (
     <Section sectionId="testimonials">
         <MaxWContainer className=" relative">
-            <span className=" absolute top-32 -left-24 -rotate-12 text-Purple700/50 blur-md -z-20">
+            <span className=" absolute top-32 -left-24 -rotate-12 text-brand_primary/70 blur-md -z-20">
                 <FaQuoteLeft className="size-80"/>
             </span>
-            <span className=" absolute bottom-0 -right-24 -rotate-12 text-Purple700/50 blur-md -z-20 hidden lg:block">
+            <span className=" absolute bottom-0 -right-24 -rotate-12 text-brand_primary/70 blur-md -z-20 hidden lg:block">
                 <FaQuoteRight className="size-44"/>
             </span>
             <SectionHeading
@@ -23,9 +23,9 @@ export default function Testimonials() {
                 {
                     testimonials.map(item => {
                         return(
-                            <div key={item.id} className={` lg:w-96 flex flex-col flex-shrink-0 w-80 border border-solid border-LightPurple rounded-xl p-4 bg-${item.Color}`}>
+                            <div key={item.id} className={` lg:w-96 flex flex-col flex-shrink-0 w-80 border border-solid border-brand_primary/50 rounded-xl p-4 bg-${item.Color}`}>
                                 {/* <h3 className="pb-2 text-LightPurple text-sm font-semibold">{item.Title}</h3> */}
-                                <p className="text-DarkPurple text-base font-medium ">{`"${item.Body}"`}</p>
+                                <p className="text-brand_primary text-base font-medium ">{`"${item.Body}"`}</p>
                             </div>
                         )
                     })

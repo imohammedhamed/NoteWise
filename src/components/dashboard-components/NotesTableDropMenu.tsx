@@ -12,7 +12,7 @@ export default function NotesTableDropMenu({NoteTableName,NoteTableId}:NotesTabl
   return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <p className=" flex justify-center items-center gap-1 text-DarkPurple text-base font-semibold p-1 rounded-md transition-all cursor-pointer hover:bg-DarkPurple/5">
+                <p className=" flex justify-center items-center gap-1 text-brand_primary text-base font-semibold p-1 rounded-md transition-all cursor-pointer hover:bg-brand_primary/5">
                     <FiTable />     
                     {NoteTableName}
                 </p>

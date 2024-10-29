@@ -15,7 +15,7 @@ export default async function WorkSpaceList({userId}:WorkSpaceListProps) {
                 return <div key={i}>
                     {
                         item.WorkingSpaces.map((item,i)=>{
-                            return <Link href={`/${userId}/${item.slug}`} key={i} className=" py-1 flex justify-between items-center text-base font-semibold text-DarkPurple rounded-md p-1.5 hover:bg-Purple50 cursor-pointer">
+                            return <Link href={`/${userId}/${item.slug}`} key={i} className=" py-1 flex justify-between items-center text-base font-semibold text-brand_primary rounded-md p-1.5 hover:bg-brand_fourthary/5 cursor-pointer">
                                 {item.name}
                             <FavoriteBtn
                             favorite={item.favorite}

@@ -91,26 +91,26 @@ export default function UserAccountDialog({
         <Button variant="UserAccountDialog" className="px-0 w-full justify-start">
           <div className="w-full flex justify-between items-center">
             <span className="w-full flex justify-start items-center gap-2">
-              <Avatar className="border border-solid border-DarkPurple/20 rounded-xl min-w-5 min-h-5">
+              <Avatar className="border border-solid border-brand_primary/20 rounded-xl min-w-5 min-h-5">
                 <AvatarImage src={`${picture}`} alt="my picture" className="w-full h-full" />
                 <AvatarFallback>{name.charAt(0)}</AvatarFallback>
               </Avatar>
               <span className="w-full flex flex-col justify-center items-start">
                 <p className="text-sm lg:text-base font-bold">{name}</p> {/* Updated to use state `name` */}
-                <p className="text-xs text-DarkPurple/50 font-bold">Free Plan</p>
+                <p className="text-xs text-DarkNeutral/50 font-bold">Free Plan</p>
               </span>
             </span>
-            <FaAngleRight className="text-DarkPurple/50 size-4" />
+            <FaAngleRight className="text-DarkNeutral/50 size-4" />
           </div>
         </Button>
       </DialogTrigger>
       <DialogContent className="lg:w-[525px] w-[350px]">
         <DialogHeader>
-          <DialogTitle className="border-b text-start border-DarkPurple/10 pb-3">My profile</DialogTitle>
+          <DialogTitle className="border-b text-start border-DarkNeutral/10 pb-3">My profile</DialogTitle>
         </DialogHeader>
         <div className="py-5 w-full">
           <div className="w-full flex justify-start items-center gap-3">
-            <Avatar className="border border-solid border-DarkPurple/20 rounded-xl min-w-24 min-h-24">
+            <Avatar className="border border-solid border-brand_primary/20 rounded-xl min-w-24 min-h-24">
               <AvatarImage src={`${picture}`} alt="my picture" />
               <AvatarFallback>{name.charAt(0)}</AvatarFallback>
             </Avatar>
@@ -121,7 +121,7 @@ export default function UserAccountDialog({
                   name="username"
                   render={({ field }) => (
                     <FormItem>
-                      <Label htmlFor="username" className="w-full text-start text-DarkPurple font-bold">
+                      <Label htmlFor="username" className="w-full text-start text-brand_primary font-bold">
                         Preferred Name :
                       </Label>
                       <FormControl>
@@ -140,23 +140,23 @@ export default function UserAccountDialog({
               </form>
             </Form>
           </div>
-          <DialogTitle className="border-b border-DarkPurple/10 pb-3 pt-10">Account security</DialogTitle>
+          <DialogTitle className="border-b border-brand_primary/10 pb-3 pt-10">Account security</DialogTitle>
           <div className="w-full py-5 flex flex-col justify-center items-start">
             <span className="w-full flex justify-between items-center">
-              <p className="text-base font-semibold text-DarkPurple">Email</p>
+              <p className="text-base font-semibold text-brand_primary">Email</p>
               <ChangeEmailDialog id={id} name={name} email={email} password={password} />
             </span>
-            <p className="text-sm font-bold text-DarkPurple/50 ">{email}</p>
+            <p className="text-sm font-bold text-brand_primary/50 ">{email}</p>
           </div>
           <div className="w-full py-5 flex flex-col justify-center items-start">
             <span className="w-full flex justify-between items-center ">
-              <p className="text-base font-semibold text-DarkPurple">Password</p>
+              <p className="text-base font-semibold text-brand_primary">Password</p>
               <ChangePasswordDialog id={id} name={name} password={password} />
             </span>
-            <p className="text-sm font-bold text-DarkPurple/50 ">Set a permanent password to login to your account.</p>
+            <p className="text-sm font-bold text-brand_primary/50 ">Set a permanent password to login to your account.</p>
           </div>
         </div>
-        <div className="flex flex-col border-t border-DarkPurple/10 space-y-6 pt-10">
+        <div className="flex flex-col border-t border-brand_primary/10 space-y-6 pt-10">
           <SignOutDialog />
         </div>
       </DialogContent>

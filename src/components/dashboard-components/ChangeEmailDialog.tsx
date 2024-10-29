@@ -84,9 +84,9 @@ export default function ChangeEmailDialog({id,name,email,password}:ChangeEmailDi
       </DialogTrigger>
       <DialogContent className="sm:min-w-[425px]">
         <DialogHeader className=" *:w-full *:text-center mb-7">
-            <MdOutlineMarkEmailUnread className=" text-Purple700 size-16"/>
-          <DialogTitle className=" text-DarkPurple text-2xl font-bold">Change Email</DialogTitle>
-          <DialogDescription className=" text-sm font-bold text-DarkPurple/50">
+            <MdOutlineMarkEmailUnread className=" text-brand_primary size-16"/>
+          <DialogTitle className=" text-brand_primary text-2xl font-bold">Change Email</DialogTitle>
+          <DialogDescription className=" text-sm font-bold text-brand_primary/50">
           Your current email is {newEmail}
           </DialogDescription>
         </DialogHeader>
@@ -97,7 +97,7 @@ export default function ChangeEmailDialog({id,name,email,password}:ChangeEmailDi
                     name="current_password"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel className=" text-DarkPurple font-bold">Please Enter Your Password.</FormLabel>
+                        <FormLabel className=" text-brand_primary font-bold">Please Enter Your Password.</FormLabel>
                         <FormControl>
                             <Input placeholder="password..." {...field} />
                         </FormControl>
@@ -110,7 +110,7 @@ export default function ChangeEmailDialog({id,name,email,password}:ChangeEmailDi
                     name="email"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel className=" text-DarkPurple font-bold">Please Enter a New Email </FormLabel>
+                        <FormLabel className=" text-brand_primary font-bold">Please Enter a New Email </FormLabel>
                         <FormControl>
                             <Input placeholder="enter a new email..." {...field} />
                         </FormControl>

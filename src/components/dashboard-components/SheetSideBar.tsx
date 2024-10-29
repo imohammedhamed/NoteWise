@@ -21,7 +21,7 @@ export default async function SheetSideBar({UserId}:SheetSideBarProps) {
   return (
     <Sheet>
         <SheetTrigger asChild>
-            <FaAlignLeft className=" ml-1 size-6 text-DarkPurple/50"/>
+            <FaAlignLeft className=" ml-1 size-6 text-DarkNeutral/50"/>
         </SheetTrigger>
         <SheetContent side={"left"} className="max-h-screen overflow-y-auto">
             <SheetHeader>
@@ -31,8 +31,8 @@ export default async function SheetSideBar({UserId}:SheetSideBarProps) {
                 />
                 <div className="pt-4">
                 <Link href={`/${UserId}`} className=" w-full flex justify-start items-center gap-2 p-1.5 rounded-xl transition-all hover:bg-Purple100">
-                <FaHouse className=" size-4 text-DarkPurple"/>
-                <p className="text-base font-bold text-DarkPurple">Home</p>
+                <FaHouse className=" size-4 text-DarkNeutral"/>
+                <p className="text-base font-bold text-DarkNeutral">Home</p>
                 </Link>
                 </div>  
             </div>

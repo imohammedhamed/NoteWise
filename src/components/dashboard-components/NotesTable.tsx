@@ -10,7 +10,12 @@ interface NotesTableProps{
     WorkingSpaceSlug:string|undefined|null
     userId:string|undefined|null
 }
-export default async function NotesTable({WorkingSpaceName,WorkingSpaceSlug,workingSpaceId,userId}:NotesTableProps) {
+export default async function NotesTable({
+  WorkingSpaceName,
+  WorkingSpaceSlug,
+  workingSpaceId,
+  userId
+}:NotesTableProps) {
     const UserTables= await getUserTables(workingSpaceId)
   return (
     <MaxWContainer className="my-14 mx-4 space-y-5">

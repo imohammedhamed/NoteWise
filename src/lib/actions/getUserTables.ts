@@ -1,6 +1,7 @@
 import prisma from "./prisma"
+import { cache } from 'react';
 
-export default async function getUserTables(WorkingSpaceId:string|undefined){
+export default cache(async function getUserTables(WorkingSpaceId: string | undefined) {
     try {
         if (!WorkingSpaceId) {
             console.error("Invalid userId: userId is null or undefined.");
@@ -14,13 +15,13 @@ export default async function getUserTables(WorkingSpaceId:string|undefined){
         if (UserTables) {
             return UserTables;
     } else {
-      console.error(`User not found for userId: ${WorkingSpaceId}`);
-      return null;
-    }
+            console.error(`User not found for userId: ${WorkingSpaceId}`);
+            return null;
+        }
         
     } catch (error) {
         console.error(`Something went wrong ${error}.`);
         return null;
     }
 
-}
+})

@@ -11,14 +11,10 @@ const config = {
   prefix: "",
   theme: {
     colors:{
-      DarkPurple:"#1C0430",
-      LightPurple:"rgba(28, 4, 48, 0.4)",
-      Purple50:"#faf5ff",
-      Purple100:"#f3e8ff",
-      Purple200:"#e9d5ff",
-      Purple300:"#d8b4fe",
-      Purple600:"#9333ea",
-      Purple700:"#7e22ce",
+      brand_primary:"#0a0a0a",
+      brand_secondary:"#fafafa",
+      brand_tertiary:"#e5e5e5",
+      brand_fourthary:"#171717",
       Red700:"#b91c1c",
       Gray400:"#9ca3af",
       Dark:"#030712",

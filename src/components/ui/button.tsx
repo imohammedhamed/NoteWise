@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: " bg-Purple700 text-base text-Purple50 hover:bg-Purple700/80",
+        default: " bg-brand_primary text-base text-brand_secondary hover:bg-brand_primary/80",
         destructive:
           "bg-red-500 text-slate-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/90",
         outline:
-          "border border-DarkPurple/50 hover:bg-slate-100 hover:bg-DarkPurple/10",
+          "border border-brand_primary/50 hover:bg-slate-100 hover:bg-brand_primary/10",
         secondary:
           "bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80",
-        ghost: "bg-none border border-solid border-DarkPurple text-DarkPurple transition-all hover:border-Purple700 hover:text-Purple700",
+        ghost: "bg-none border border-solid border-brand_primary text-brand_primary transition-all hover:opacity-80",
         // hover:scale-90
         link: "text-slate-900 underline-offset-4 hover:underline dark:text-slate-50",
         UserAccountDialog:"transition-all hover:scale-95"

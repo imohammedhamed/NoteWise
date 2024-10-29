@@ -63,7 +63,7 @@ export default function WorkingSpaceRenameBtn({userId,workingSpaceId,initialWork
   return (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <p className=" text-DarkPurple text-base font-semibold p-1 rounded-md transition-all cursor-pointer text-nowrap overflow-hidden hover:bg-DarkPurple/5">{workingSpaceName}</p>
+                <p className=" text-brand_primary text-base font-semibold p-1 rounded-md transition-all cursor-pointer text-nowrap overflow-hidden hover:bg-brand_primary/5">{workingSpaceName}</p>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
                 <DropdownMenuLabel>Rename :</DropdownMenuLabel>
@@ -77,7 +77,7 @@ export default function WorkingSpaceRenameBtn({userId,workingSpaceId,initialWork
                             <FormControl>
                                 <Input disabled={loading} className=" w-full" placeholder={`${workingSpaceName} ...`} type="text" {...field} />
                             </FormControl>
-                            {(loading)&&<span className=" absolute top-0 right-2 loading loading-infinity loading-md text-DarkPurple/20"></span>} 
+                            {(loading)&&<span className=" absolute top-0 right-2 loading loading-infinity loading-md text-brand_primary/20"></span>} 
                             <FormMessage className=" text-Red700"/>
                             </FormItem>
                         )}

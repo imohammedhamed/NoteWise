@@ -12,7 +12,7 @@ interface DashboardTablesToolBarProps{
 }
 export default function DashboardTablesToolBar({userId,workingSpaceId,initialWorkingSpaceName,Favorite}:DashboardTablesToolBarProps) {
   return (
-    <header className=' w-full top-0 z-50 p-3 border-b border-DarkPurple/10'>
+    <header className=' w-full top-0 z-50 p-3 border-b border-brand_primary/10'>
         <div className=" flex justify-between items-center px-6">
           <RenameBtn
           userId={userId}
