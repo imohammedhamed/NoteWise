@@ -72,7 +72,7 @@ export default async function page({ params }: { params: { noteslug: string } })
     const UserUniqueTableData = await getUserUniqueTableData(UserNoteData?.notesTableId||"Null",UserNoteData?.slug||"null",UserNoteData?.id)
     return (
       <div>
-        <header className=' w-full p-3 border-b border-DarkNeutral/10'>
+        <header className=' w-full p-3 border-b border-brand_primary/10'>
           <span className="w-full flex justify-between items-center px-6">
             <UserNotesRenameBtn
               InitialUserNoteName={UserNoteData?.title || "Untitled Note"}

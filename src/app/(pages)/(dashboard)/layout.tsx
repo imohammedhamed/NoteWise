@@ -13,7 +13,7 @@ export default async function RootLayout({
     redirect(`/login`)
   }
   return (
-    <div className=" bg-brand_tertiary flex lg:flex-row flex-col min-h-screen">
+    <div className=" flex lg:flex-row flex-col min-h-screen">
       <SideBar />
       {/* <SheetSideBar/> */}
       <div className="flex-grow lg:ml-[19rem]">
