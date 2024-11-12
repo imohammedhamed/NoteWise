@@ -88,7 +88,7 @@ export default function UserNoteBodyInput({
                 onDebouncedUpdate={handleDebouncedUpdate}
                 debounceDuration={1000} 
               />
-              <span className=" border border-LightPurple/20 rounded-md px-2 py-1 absolute top-0 right-0 lg:text-sm text-xs font-semibold text-LightPurple">{ loading ? "Saving..." : "Saved"}</span>
+              {/* <span className=" border border-LightPurple/20 rounded-md px-2 py-1 absolute top-0 right-0 lg:text-sm text-xs font-semibold text-LightPurple">{ loading ? "Saving..." : "Saved"}</span> */}
             </FormItem>
           )}
         />

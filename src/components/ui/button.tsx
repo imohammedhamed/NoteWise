@@ -19,7 +19,8 @@ const buttonVariants = cva(
         ghost: "bg-none border border-solid border-brand_primary text-brand_primary transition-all hover:opacity-80",
         // hover:scale-90
         link: "text-slate-900 underline-offset-4 hover:underline dark:text-slate-50",
-        UserAccountDialog:"transition-all hover:scale-95"
+        UserAccountDialog:"transition-all hover:scale-95" ,
+        ChatNoteBtn : " bg-brand_secondary border border-brand_fourthary rounded-full hover:opacity-80"
       },
       size: {
         default: "h-10 px-4 py-2",
