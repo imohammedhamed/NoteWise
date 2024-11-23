@@ -12,8 +12,8 @@ export default function Testimonials() {
             <span className=" absolute top-32 -left-24 -rotate-12 text-brand_primary/70 blur-md -z-20">
                 <FaQuoteLeft className="size-80"/>
             </span>
-            <span className=" absolute bottom-0 -right-24 -rotate-12 text-brand_primary/70 blur-md -z-20 hidden lg:block">
-                <FaQuoteRight className="size-44"/>
+            <span className=" absolute bottom-0 right-5 -rotate-12 text-brand_primary/70 blur-md -z-20 hidden lg:block">
+                <FaQuoteRight className="size-24"/>
             </span>
             <SectionHeading
             SectionTitle = "Testimonials"
