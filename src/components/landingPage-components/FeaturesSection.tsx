@@ -5,7 +5,7 @@ import Section from "../ui/Section"
 import Image from "next/image"
 export default function FeaturesSection() {
   return (
-        <Section sectionId="features" className=" bg-gradient-to-b from-brand_secondary via-brand_fourthary/20 to-brand_secondary">
+        <Section sectionId="features" className=" bg-brand_primary/5">
         <MaxWContainer>
             <SectionHeading
             SectionTitle = "Features"

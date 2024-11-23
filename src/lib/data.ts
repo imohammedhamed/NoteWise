@@ -94,7 +94,7 @@ export const testimonials =[
         id:"3",
         Title:"Michael Brown",
         Body:"NoteWise's real-time collaboration feature has streamlined our team's workflow. We can all contribute to and edit notes simultaneously, which is a huge productivity boost.",
-        Color:"white",
+        Color:"brand_secondary",
     },
     {
         id:"4",
@@ -106,7 +106,7 @@ export const testimonials =[
         id:"5",
         Title:"Jessica Wilson",
         Body:"NoteWise has become an indispensable tool for my research projects. The ability to interact with my notes and get relevant insights is amazing.",
-        Color:"white",
+        Color:"brand_secondary",
     },
     {
         id:"6",
@@ -118,7 +118,7 @@ export const testimonials =[
         id:"7",
         Title:"Linda Thompson",
         Body:"NoteWise is perfect for managing my daily tasks and to-do lists. The interactive features make it so much more than just a note-taking app.",
-        Color:"white",
+        Color:"brand_secondary",
     },
     {
         id:"8",
@@ -136,7 +136,7 @@ export const testimonials =[
         id:"10",
         Title:"Maria Rodriguez",
         Body:"NoteWise's clean interface and powerful features make it a joy to use. I can't imagine going back to traditional note-taking methods.",
-        Color:"white",
+        Color:"brand_secondary",
     },
     
 ] as const 
