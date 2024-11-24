@@ -4,7 +4,7 @@ export default function loading() {
     <div className=" relative flex flex-1 min-h-screen w-full">
         <div className=" flex justify-center items-center w-full">
         <span className="loading loading-infinity loading-lg text-Purple700"></span>
-        <BlurEffect className="top-10 left-10 w-32 h-[20rem] lg:h-[50rem]"/>
+        {/* <BlurEffect className="top-10 left-10 w-32 h-[20rem] lg:h-[50rem]"/> */}
         </div>
     </div>
   )
