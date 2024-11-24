@@ -31,8 +31,8 @@ export default function UserWorkingSpaceListCardsNotFound({UserId}:UserWorkingSp
         <div className=" mt-14 w-full flex flex-col justify-center items-center gap-5 flex-wrap">
             <FaFolderOpen className=" lg:size-28 size-16 text-Purple700/80 "/>
             <span className=" space-y-2 text-center">
-            <p className=" lg:text-xl text-base font-bold text-DarkNeutral">It Looks Like You {`Don't`} have any Working Space Folder</p>
-            <p className=" lg:text-base text-sm text-DarkNeutral/50 font-extrabold">What are you waiting for?</p>
+            <p className=" lg:text-xl text-base font-bold text-brand_primary">It Looks Like You {`Don't`} have any Working Space Folder</p>
+            <p className=" lg:text-base text-sm text-brand_primary/50 font-extrabold">What are you waiting for?</p>
             </span>
             <Button 
                 onClick={handleClick} 

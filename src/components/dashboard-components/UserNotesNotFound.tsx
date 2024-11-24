@@ -9,8 +9,8 @@ export default function UserNotesNotFound({NoteTableId,NoteTableName}:UserNotesN
       <div className=" my-10 w-full flex flex-col justify-center items-center gap-5">
           <GrNotes className=" size-16 text-Purple700/80 "/>
           <span className=" space-y-1 text-center">
-          <p className=" text-base font-extrabold text-DarkNeutral">Your {NoteTableName} Table looks empty</p>
-          <p className=" text-sm text-DarkNeutral/50 font-extrabold">What are you waiting for?</p>
+          <p className=" text-base font-extrabold text-brand_primary">Your {NoteTableName} Table looks empty</p>
+          <p className=" text-sm text-brand_primary/50 font-extrabold">What are you waiting for?</p>
           </span>
           <AddNewNoteBtn NoteTableId={NoteTableId}/>
       </div>
