@@ -73,7 +73,7 @@ export default function SignUpPage() {
         <MaxWContainer className=' flex justify-center items-center'>
           <GoBackBtn/>
             <BlurEffect className="top-10 left-10 w-32 h-[20rem] lg:h-[50rem]"/>
-            <div className="relative p-5 lg:p-10 md:p-10 rounded-xl bg-brand_tertiary lg:w-[30rem] md:w-[30rem] w-max mt-10">
+            <div className="relative p-5 lg:p-10 md:p-10 rounded-xl bg-brand_primary/10 lg:w-[30rem] md:w-[30rem] w-max mt-10">
             <WelcomeBan Welcome_to="Sign Up"/>
             <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
