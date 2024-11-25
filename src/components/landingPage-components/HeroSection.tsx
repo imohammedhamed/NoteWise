@@ -27,8 +27,8 @@ export default function HeroSection() {
           </span>
           <span className=" relative">
             <Image src={heroImg} alt="hero img" priority quality={100} className=" lg:p-5 md:p-5 p-2.5 rounded-xl bg-brand_primary/10 backdrop-blur-xl "/>
-            <Image src={IMG1} alt="hero icon images" width={50} height={50} priority quality={100} className=" overflow-hidden absolute  md:-top-10 md:right-0 rotate-12 hidden sm:block"/>
-            <Image src={IMG3} alt="hero icon images" width={50} height={50} priority quality={100} className=" overflow-hidden absolute  md:bottom-5 md:left-3 -rotate-12 hidden sm:block"/>
+            <Image src={IMG1} alt="hero icon images" width={60} height={60} priority quality={100} className=" overflow-hidden absolute  md:-top-10 md:right-0 rotate-12 hidden sm:block"/>
+            <Image src={IMG3} alt="hero icon images" width={60} height={60} priority quality={100} className=" overflow-hidden absolute  md:bottom-5 md:left-3 -rotate-12 hidden sm:block"/>
           </span>
         </MaxWContainer>
     </motion.section>
