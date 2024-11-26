@@ -15,7 +15,6 @@ export default async function RootLayout({
   return (
     <div className=" flex lg:flex-row flex-col min-h-screen">
       <SideBar />
-      {/* <SheetSideBar/> */}
       <div className="flex-grow lg:ml-[19rem]">
         {children}
       </div>

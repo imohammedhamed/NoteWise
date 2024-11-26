@@ -103,7 +103,7 @@ export default function LogInPage() {
                 )}
               />
               <br />
-              <Button disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md text-brand_primary/50"></span> :`Log In`}</Button>
+              <Button disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md"></span> :`Log In`}</Button>
               <OrAuthGoogle/>
               <GoogleAuthBtn/>
               <p className='text-xs lg:text-sm font-semibold text-brand_primary/50 py-2'>

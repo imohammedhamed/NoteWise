@@ -1,6 +1,7 @@
 import MaxWContainer from "@/components/ui/MaxWContainer";
 import getUserData from "@/lib/actions/getUserData";
 import UserWorkingSpaceListCards from "@/components/dashboard-components/UserWorkingSpaceListCards";
+import { Suspense } from 'react'
 
 interface PageProps {
   params: {
@@ -20,7 +21,9 @@ export default async function Page({ params }: PageProps) {
         <p className="text-sm text-start font-extrabold text-brand_fourthary/50">
           Your working space list
         </p>
+      <Suspense fallback={<p>Loading ...</p>}>
         <UserWorkingSpaceListCards UserId={UserData?.id} />
+      </Suspense>
       </div>
     </MaxWContainer>
   );
