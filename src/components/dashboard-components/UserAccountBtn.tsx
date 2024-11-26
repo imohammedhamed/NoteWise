@@ -9,9 +9,9 @@ export default async function UserAccountBtn({userId}:UserAccountBtnProps) {
     if(UserData){
     return <UserAccountDialog
             id={UserData.id}
-            name={UserData.name}
-            email={UserData.email}
-            password={UserData.password}
+            name={UserData.name||""}
+            email={UserData.email||""}
+            password={UserData.password||""}
             picture={UserData.picture}
             />  
     }else{

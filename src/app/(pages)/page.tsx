@@ -10,11 +10,21 @@ import Navbar from '@/components/landingPage-components/Navbar';
 export default async function page() {
   const session = await getUserSession();
     if (session) {
-      const user = await prisma.user.findUnique({
+      let user = await prisma.user.findUnique({
         where: {
           email: session.user?.email || "",
         },
       });
+      
+      if (!user && session.user?.email) {
+        user = await prisma.user.create({
+          data: {
+            email: session.user.email,
+            name: session.user.name || "unnamed",
+          },
+        });
+      }
+
       if (user) {
         redirect(`/${user.id}`);
       }

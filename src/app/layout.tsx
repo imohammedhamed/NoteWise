@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(' bg-brand_secondary text-brand_primary flex flex-col min-h-screen',lato.className)}>
-      <Toaster position="top-center" />
+      <Toaster position="bottom-left" />
       <main>
         {children}
       </main>
