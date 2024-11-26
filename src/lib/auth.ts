@@ -1,8 +1,8 @@
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-// import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import GoogleProvider from "next-auth/providers/google";
+import { PrismaAdapter } from "@auth/prisma-adapter"
 import prisma from "../lib/actions/prisma";
-
 export const authOptions: NextAuthOptions = {
   // adapter: PrismaAdapter(prisma),
   secret: process.env.NEXT_AUTH,
@@ -16,41 +16,43 @@ export const authOptions: NextAuthOptions = {
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        email: { label: "Email", type: "email", placeholder: "NoteWise-ai@gmail.com" },
+        email: { label: "Email", type: "email", placeholder: "notewise-ai@gmail.com" },
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
           throw new Error("Email and password are required");
         }
-
-        // Fetch user including related data using Prisma
         const user:any = await prisma.user.findUnique({
           where: {
             email: credentials.email,
           },
         });
-
         if (!user || user.password !== credentials.password) {
           throw new Error("Invalid email or password");
         }
 
-        // Return user data including profile, addresses, and orders
         return {
           id: user.id,
           name: user.name,
           email: user.email,
         };
       }
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRETE!,
+      authorization: { params: { scope: 'openid email profile' } },
     })
   ],
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user, account }) {
       if (user) {
-        return {
-          ...token,
-          id: user.id
-        };
+        token.id = user.id;
+        
+        if (account?.provider === "google") {
+          console.log("Google sign-in detected:", { user, account });
+        }
       }
       return token;
     },
@@ -60,8 +62,6 @@ export const authOptions: NextAuthOptions = {
         user: {
           ...session.user,
           id: token.id,
-          name: token.name,
-          email: token.email,
         }
       };
     },

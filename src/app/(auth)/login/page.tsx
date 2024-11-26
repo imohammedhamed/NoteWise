@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/form"
 import GoBackBtn from '@/components/ui/GoBackBtn';
 import { toast } from 'sonner';
+import GoogleAuthBtn from '@/components/dashboard-components/GoogleAuthBtn';
 export default function LogInPage() {
     const router = useRouter()
     const [loading,setLoading] = useState(false)
@@ -102,6 +103,10 @@ export default function LogInPage() {
               />
               <br />
               <Button disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md"></span> :`Log In`}</Button>
+              <p className=' text-brand_primary/50 text-base font-extrabold w-full text-center py-1'>Or</p>
+              <GoogleAuthBtn>
+                Log In with Google
+              </GoogleAuthBtn>
               <p className='text-xs lg:text-sm font-semibold p-2'>
                 IF YOU {`DON'T`} HAVE AN ACCOUNT <Link href='/signup' className=' text-brand_primary hover:underline'>SIGN UP</Link>
               </p>
