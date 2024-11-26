@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: {
     default:"NoteWise : Take Notes to the Next Level and Organize, Discuss, and Enhance Your Ideas Seamlessly",
     template:"%s - NoteWise"
-  },
+  }, 
   description: "Interact with Your Notes Like Never Before. Organize, Discuss, and Enhance Your Ideas Seamlessly.",
 };
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(' bg-brand_secondary text-brand_primary flex flex-col min-h-screen',lato.className)}>
-      <Toaster position="bottom-left" />
+      <Toaster position="top-center" />
       <main>
         {children}
       </main>

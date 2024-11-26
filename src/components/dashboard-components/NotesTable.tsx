@@ -4,6 +4,8 @@ import NotesTableDropMenu from "./NotesTableDropMenu";
 import TablesNotFound from "./TablesNotFound";
 import UserNotes from "./UserNotes";
 import AddNewNoteBtn from "./AddNewNoteBtn";
+import { Suspense } from 'react'
+
 interface NotesTableProps{
     workingSpaceId:string|undefined
     WorkingSpaceName:string|undefined
@@ -37,13 +39,15 @@ export default async function NotesTable({
                                 </span>
                             </header>
                             <div className=" w-full flex justify-start items-center flex-wrap flex-grow gap-5 py-5 px-2">
-                                <UserNotes 
-                                    userId={userId}
-                                    NoteTableId={table.id}
-                                    WorkingSpaceSlug={WorkingSpaceSlug}
-                                    NoteTableSlug={table.slug||null}
-                                    NoteTableName={table.name || "New Table"}
-                                />
+                                <Suspense fallback={<p>Loading ...</p>}>
+                                    <UserNotes 
+                                        userId={userId}
+                                        NoteTableId={table.id}
+                                        WorkingSpaceSlug={WorkingSpaceSlug}
+                                        NoteTableSlug={table.slug||null}
+                                        NoteTableName={table.name || "New Table"}
+                                    />
+                                </Suspense>
                             </div>
                         </div>
                     )

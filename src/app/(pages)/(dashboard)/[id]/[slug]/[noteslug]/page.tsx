@@ -1,6 +1,6 @@
 import prisma from "@/lib/actions/prisma";
 import { Metadata } from "next/types";
-import { cache } from "react";
+import { cache, Suspense } from "react";
 import MaxWContainer from "@/components/ui/MaxWContainer";
 import BreadcrumbDemo from "@/components/dashboard-components/Breadcrumb";
 import UserNoteDropMenu from "@/components/dashboard-components/UserNoteDropMenu";
@@ -72,24 +72,26 @@ export default async function page({ params }: { params: { noteslug: string } })
     const UserUniqueTableData = await getUserUniqueTableData(UserNoteData?.notesTableId||"Null",UserNoteData?.slug||"null",UserNoteData?.id)
     return (
       <div>
-        <header className=' w-full p-3 border-b border-brand_primary/10'>
-          <span className="w-full flex justify-between items-center px-6">
-            <UserNotesRenameBtn
-              InitialUserNoteName={UserNoteData?.title || "Untitled Note"}
-              UserNoteId={UserNoteData?.id}
-              WorkingSpaceSlug={getWorkingSpaceSlug.slug}
-              UserId={getUserId?.id}
-            />
-            <UserNotesDeleteBtn
-              UserNoteId={UserNoteData?.id}
-              UserNoteName={UserNoteData?.title||"Untitled Note"}
-              UserNoteTableId={UserNoteData?.notesTableId}
-              WorkingSpaceSlug={getWorkingSpaceSlug.slug}
-              UserId={getUserId?.id}
-              className=" size-5"
-            />
-          </span>
-        </header>
+          <Suspense fallback={<p>Loading ...</p>}>
+            <header className=' w-full p-3 border-b border-brand_primary/10'>
+              <span className="w-full flex justify-between items-center px-6">
+                <UserNotesRenameBtn
+                  InitialUserNoteName={UserNoteData?.title || "Untitled Note"}
+                  UserNoteId={UserNoteData?.id}
+                  WorkingSpaceSlug={getWorkingSpaceSlug.slug}
+                  UserId={getUserId?.id}
+                />
+                <UserNotesDeleteBtn
+                  UserNoteId={UserNoteData?.id}
+                  UserNoteName={UserNoteData?.title||"Untitled Note"}
+                  UserNoteTableId={UserNoteData?.notesTableId}
+                  WorkingSpaceSlug={getWorkingSpaceSlug.slug}
+                  UserId={getUserId?.id}
+                  className=" size-5"
+                  />
+              </span>
+            </header>
+          </Suspense>
           <BreadcrumbDemo
             UserId={getUserId?.id}
             UserNoteSlug={UserNoteData?.slug||"untitled-note"}
@@ -99,20 +101,22 @@ export default async function page({ params }: { params: { noteslug: string } })
             UserNoteTableName={UserUniqueTableData?.name||"New Table"}
           />
           <MaxWContainer className=" relative my-14">
-            <UserNote
-              UserNoteTitle={UserNoteData?.title || "Untitled Note"}
-              UserNoteBody={UserNoteData?.body || ""}
-              UserNoteId={UserNoteData?.id}
-              WorkingSpaceSlug={getWorkingSpaceSlug.slug}
-              UserId={getUserId?.id}
-            />
-            <ChatNote
-              UserNoteTitle={UserNoteData?.title || "Untitled Note"}
-              UserNoteBody={UserNoteData?.body || ""}
-              UserNoteId={UserNoteData?.id}
-              WorkingSpaceSlug={getWorkingSpaceSlug.slug}
-              UserId={getUserId?.id}
-            />
+            <Suspense fallback={<p>Loading ...</p>}>
+              <UserNote
+                UserNoteTitle={UserNoteData?.title || "Untitled Note"}
+                UserNoteBody={UserNoteData?.body || ""}
+                UserNoteId={UserNoteData?.id}
+                WorkingSpaceSlug={getWorkingSpaceSlug.slug}
+                UserId={getUserId?.id}
+              />
+            </Suspense>
+              <ChatNote
+                UserNoteTitle={UserNoteData?.title || "Untitled Note"}
+                UserNoteBody={UserNoteData?.body || ""}
+                UserNoteId={UserNoteData?.id}
+                WorkingSpaceSlug={getWorkingSpaceSlug.slug}
+                UserId={getUserId?.id}
+              />
           </MaxWContainer>
       </div>
     )
