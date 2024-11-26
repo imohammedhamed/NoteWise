@@ -22,6 +22,7 @@ import {
 import GoBackBtn from '@/components/ui/GoBackBtn';
 import { toast } from 'sonner';
 import GoogleAuthBtn from '@/components/dashboard-components/GoogleAuthBtn';
+import OrAuthGoogle from '@/components/dashboard-components/OrAuthGoogle';
 export default function SignUpPage() {
     const router = useRouter();
     const [loading,setLoading] = useState(false);
@@ -132,12 +133,10 @@ export default function SignUpPage() {
               />
               <br />
               <Button disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md"></span> :`Sign Up`}</Button>
-              <p className=' text-brand_primary/50 text-base font-extrabold w-full text-center py-1'>Or</p>
-              <GoogleAuthBtn>
-                Sign Up with Google
-              </GoogleAuthBtn>
-              <p className='text-xs lg:text-sm text-DarkBlue font-semibold p-2'>
-                IF YOU HAVE AN ACCOUNT <Link href='/login' className=' text-Purple700 hover:underline'>LOGIN</Link>
+              <OrAuthGoogle/>
+              <GoogleAuthBtn/>
+              <p className='text-xs lg:text-sm text-brand_primary/50 font-semibold py-2'>
+                IF YOU HAVE AN ACCOUNT <Link href='/login' className=' text-brand_primary font-extrabold hover:underline'>LOGIN</Link>
               </p>
             </form>
           </Form>
