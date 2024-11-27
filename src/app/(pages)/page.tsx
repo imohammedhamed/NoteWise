@@ -7,6 +7,11 @@ import { redirect } from 'next/navigation'
 import getUserSession from '@/lib/actions/getUserSession';
 import prisma from "@/lib/actions/prisma"
 import Navbar from '@/components/landingPage-components/Navbar';
+
+function generateRandomPassword(): string {
+  return Math.floor(100000 + Math.random() * 900000).toString();
+}
+
 export default async function page() {
   const session = await getUserSession();
     if (session) {
@@ -21,6 +26,7 @@ export default async function page() {
           data: {
             email: session.user.email,
             name: session.user.name || "unnamed",
+            password: generateRandomPassword()
           },
         });
       }
