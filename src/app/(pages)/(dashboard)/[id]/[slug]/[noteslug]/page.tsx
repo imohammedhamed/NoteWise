@@ -72,7 +72,6 @@ export default async function page({ params }: { params: { noteslug: string } })
     const UserUniqueTableData = await getUserUniqueTableData(UserNoteData?.notesTableId||"Null",UserNoteData?.slug||"null",UserNoteData?.id)
     return (
       <div>
-          <Suspense fallback={<p>Loading ...</p>}>
             <header className=' w-full p-3 border-b border-brand_primary/10'>
               <span className="w-full flex justify-between items-center px-6">
                 <UserNotesRenameBtn
@@ -91,15 +90,14 @@ export default async function page({ params }: { params: { noteslug: string } })
                   />
               </span>
             </header>
-          </Suspense>
-          <BreadcrumbDemo
-            UserId={getUserId?.id}
-            UserNoteSlug={UserNoteData?.slug||"untitled-note"}
-            WorkingSpaceSlug={getWorkingSpaceSlug.slug||"untitled-working-space"}
-            UserNoteTitle={UserNoteData?.title|| "Untitled Note"}
-            WorkingSpaceName={getWorkingSpaceSlug.name}
-            UserNoteTableName={UserUniqueTableData?.name||"New Table"}
-          />
+            <BreadcrumbDemo
+              UserId={getUserId?.id}
+              UserNoteSlug={UserNoteData?.slug||"untitled-note"}
+              WorkingSpaceSlug={getWorkingSpaceSlug.slug||"untitled-working-space"}
+              UserNoteTitle={UserNoteData?.title|| "Untitled Note"}
+              WorkingSpaceName={getWorkingSpaceSlug.name}
+              UserNoteTableName={UserUniqueTableData?.name||"New Table"}
+            />
           <MaxWContainer className=" relative my-14">
             <Suspense fallback={<p>Loading ...</p>}>
               <UserNote
@@ -110,13 +108,13 @@ export default async function page({ params }: { params: { noteslug: string } })
                 UserId={getUserId?.id}
               />
             </Suspense>
-              <ChatNote
+              {/* <ChatNote
                 UserNoteTitle={UserNoteData?.title || "Untitled Note"}
                 UserNoteBody={UserNoteData?.body || ""}
                 UserNoteId={UserNoteData?.id}
                 WorkingSpaceSlug={getWorkingSpaceSlug.slug}
                 UserId={getUserId?.id}
-              />
+              /> */}
           </MaxWContainer>
       </div>
     )
