@@ -4,13 +4,11 @@ import UserNoteBodyInput from "./UserNoteBodyInput"
 import ChatNote from "./ChatNote"
 import { Suspense } from "react"
 interface UserNoteProps{
-    UserNoteTitle:string
     UserNoteBody:string
     UserNoteId:string|undefined
-    WorkingSpaceSlug:string|undefined|null
     UserId:string|undefined|null
 }
-export default async function UserNote({UserNoteTitle,UserNoteBody,UserNoteId,WorkingSpaceSlug,UserId}:UserNoteProps) {
+export default async function UserNote({UserNoteBody,UserNoteId,UserId}:UserNoteProps) {
   return (
     <MaxWContainer className=" relative mt-16 space-y-5">
       <Suspense fallback={<p>Loading ...</p>}>

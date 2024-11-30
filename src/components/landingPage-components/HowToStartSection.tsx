@@ -18,9 +18,9 @@ export default function HowToStartSection() {
                         return(
                             <div key={step.id} className=" flex justify-center items-start ">
                                 <div className=" py-4 border-t border-brand_primary h-max w-72">
-                                <span className=" font-bold text-xs text-brand_primary">{step.StepNum}</span>
-                                <h3 className=" py-1 text-xl text-brand_primary font-semibold">{step.Title}</h3>
-                                <p className=" text-base text-brand_primary/70 ">{step.Body}</p>
+                                <span className=" text-xs text-brand_primary font-bold">{step.StepNum}</span>
+                                <h3 className=" py-1 lg:text-xl text-lg text-brand_primary font-semibold">{step.Title}</h3>
+                                <p className=" lg:text-base text-sm text-brand_primary/50 font-bold ">{step.Body}</p>
                                 </div>
                             </div>
                         )

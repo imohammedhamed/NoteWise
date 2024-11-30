@@ -18,7 +18,7 @@ export default async function UserNotes({
 }: UserNotesProps) {
   const UserNotes = await getUserNotes(NoteTableId);
   return (
-    <>
+    <> 
       {UserNotes?.length === 0 ? (
         <UserNotesNotFound
           NoteTableId={NoteTableId}

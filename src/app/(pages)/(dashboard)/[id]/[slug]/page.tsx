@@ -42,17 +42,17 @@ export default async function page({ params }: { params: { slug: string } }) {
       />
       </Suspense>
       <Suspense fallback={<p>Loading ...</p>}>
-      <AddNewTable 
-        workingSpaceId={UserworkingSpaceInfo?.id}
-        className="fixed lg:bottom-10 lg:right-10 bottom-5 right-5 z-40"
-      />
-      </Suspense>
-      <Suspense fallback={<p>Loading ...</p>}>
       <NotesTable 
         userId={UserworkingSpaceInfo?.userId}
         workingSpaceId={UserworkingSpaceInfo?.id}
         WorkingSpaceName={UserworkingSpaceInfo?.name} 
         WorkingSpaceSlug={UserworkingSpaceInfo?.slug}
+      />
+      </Suspense>
+      <Suspense fallback={<p>Loading ...</p>}>
+      <AddNewTable 
+        workingSpaceId={UserworkingSpaceInfo?.id}
+        className="fixed lg:bottom-10 lg:right-10 bottom-5 right-5 z-40"
       />
       </Suspense>
     </div>
