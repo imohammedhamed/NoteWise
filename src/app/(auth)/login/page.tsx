@@ -66,12 +66,12 @@ export default function LogInPage() {
     }
   return (
     <Section sectionId="login">
-        <MaxWContainer className='flex justify-center items-center'>
+        <MaxWContainer className='flex justify-center items-center px-4'>
           <GoBackBtn/>
-            <div className="relative p-5 lg:p-10 md:p-10 rounded-xl bg-brand_primary/10 lg:w-[30rem] md:w-[30rem] w-max mt-10">
+            <div className="relative p-4 sm:p-6 lg:p-10 rounded-xl bg-brand_primary/10 w-full max-w-[30rem] mx-auto mt-4 sm:mt-6 lg:mt-10">
             <WelcomeBan Welcome_to="Log In"/>
             <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2 ">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
               <FormField
                 control={form.control}
                 name="email"
@@ -90,24 +90,35 @@ export default function LogInPage() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-brand_primary font-bold'>Password</FormLabel>
+                    <FormLabel className='text-brand_primary font-bold'>Password</FormLabel>
                     <FormControl>
-                      <span  className=' relative'>
-                      <Input  placeholder="Enter your password..." type={ishidden?'text':'password'} {...field} />
-                      <Button type='button' onClick={handleishidden} variant="outline" className=' border-none text-LightPurple absolute top-[1.6rem] right-1 h-8 px-3'>{ishidden?`hidden`:`show`}</Button>
-                      </span>
+                      <div className='relative'>
+                        <Input placeholder="Enter your password..." type={ishidden?'text':'password'} {...field} />
+                        <Button 
+                          type='button' 
+                          onClick={handleishidden} 
+                          variant="outline" 
+                          className='border-none text-LightPurple absolute right-1 top-1/2 -translate-y-1/2 h-8 px-3 text-sm'
+                        >
+                          {ishidden?`hidden`:`show`}
+                        </Button>
+                      </div>
                     </FormControl>
                     <FormMessage className='text-Red700'/>
                   </FormItem>
                 )}
               />
-              <br />
-              <Button disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md"></span> :`Log In`}</Button>
-              <OrAuthGoogle/>
-              <GoogleAuthBtn/>
-              <p className='text-xs lg:text-sm font-semibold text-brand_primary/50 py-2'>
-                IF YOU {`DON'T`} HAVE AN ACCOUNT <Link href='/signup' className=' text-brand_primary font-extrabold hover:underline'>SIGN UP</Link>
-              </p>
+              
+              <div className="space-y-4 pt-2">
+                <Button disabled={loading} className='w-full'>
+                  {loading ? <span className="loading loading-infinity loading-md"></span> :`Log In`}
+                </Button>
+                <OrAuthGoogle/>
+                <GoogleAuthBtn/>
+                <p className='text-center text-xs sm:text-sm font-semibold text-brand_primary/50 py-2'>
+                  IF YOU {`DON'T`} HAVE AN ACCOUNT <Link href='/signup' className='text-brand_primary font-extrabold hover:underline'>SIGN UP</Link>
+                </p>
+              </div>
             </form>
           </Form>
             </div>
