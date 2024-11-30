@@ -6,28 +6,30 @@ import Section from "../ui/Section";
 
 export default function HowToStartSection() {
   return (
-        <Section sectionId ="How_To_Start">
-        <MaxWContainer>
-            <SectionHeading
-            SectionTitle="How To Start ?"
-            SectionSubTitle="it has never been easier"
-            />
-            <div className=" container grid lg:grid-cols-3 grid-cols-1 gap-10 w-full">
-                {
-                    HowToStartSteps.map(step =>{
-                        return(
-                            <div key={step.id} className=" flex justify-center items-start ">
-                                <div className=" py-4 border-t border-brand_primary h-max w-72">
-                                <span className=" text-xs text-brand_primary font-bold">{step.StepNum}</span>
-                                <h3 className=" py-1 lg:text-xl text-lg text-brand_primary font-semibold">{step.Title}</h3>
-                                <p className=" lg:text-base text-sm text-brand_primary/50 font-bold ">{step.Body}</p>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
+    <Section sectionId="How_To_Start">
+      <MaxWContainer>
+        <SectionHeading
+          SectionTitle="How To Start ?"
+          SectionSubTitle="it has never been easier"
+        />
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
+          {HowToStartSteps.map(step => (
+            <div key={step.id} className="flex justify-center items-start">
+              <div className="py-4 px-3 sm:px-4 border-t border-brand_primary w-full max-w-sm">
+                <span className="text-xs md:text-sm text-brand_primary font-bold">
+                  {step.StepNum}
+                </span>
+                <h3 className="py-2 text-lg md:text-xl lg:text-2xl text-brand_primary font-semibold">
+                  {step.Title}
+                </h3>
+                <p className="text-sm md:text-base text-brand_primary/50 font-bold">
+                  {step.Body}
+                </p>
+              </div>
             </div>
-        </MaxWContainer>
-        </Section>
+          ))}
+        </div>
+      </MaxWContainer>
+    </Section>
   )
 }

@@ -72,22 +72,22 @@ export default function SignUpPage() {
     
   return (
     <Section sectionId="login">
-        <MaxWContainer className=' flex justify-center items-center'>
+        <MaxWContainer className='flex justify-center items-center px-4 sm:px-6 lg:px-8'>
           <GoBackBtn/>
-            <div className="relative p-5 lg:p-10 md:p-10 rounded-xl bg-brand_primary/10 lg:w-[30rem] md:w-[30rem] w-max mt-10">
+            <div className="relative w-full max-w-md p-4 sm:p-6 lg:p-8 rounded-xl bg-brand_primary/10 mx-auto my-8">
             <WelcomeBan Welcome_to="Sign Up"/>
             <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
               <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-DarkNeutral font-bold'>Name</FormLabel>
+                    <FormLabel className='text-sm sm:text-base text-DarkNeutral font-bold'>Name</FormLabel>
                     <FormControl>
-                      <Input  className='text-DarkNeutral' placeholder="Enter your name..." type='text' {...field} />
+                      <Input className='text-sm sm:text-base text-DarkNeutral' placeholder="Enter your name..." type='text' {...field} />
                     </FormControl>
-                    <FormMessage className='text-Red700'/>
+                    <FormMessage className='text-xs sm:text-sm text-Red700'/>
                   </FormItem>
                 )}
               />
@@ -96,11 +96,11 @@ export default function SignUpPage() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-DarkNeutral font-bold'>Email</FormLabel>
+                    <FormLabel className='text-sm sm:text-base text-DarkNeutral font-bold'>Email</FormLabel>
                     <FormControl>
-                      <Input  className='text-DarkNeutral' placeholder="Enter your email..." type='email' {...field} />
+                      <Input className='text-sm sm:text-base text-DarkNeutral' placeholder="Enter your email..." type='email' {...field} />
                     </FormControl>
-                    <FormMessage className='text-Red700'/>
+                    <FormMessage className='text-xs sm:text-sm text-Red700'/>
                   </FormItem>
                 )}
               />
@@ -109,11 +109,11 @@ export default function SignUpPage() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-DarkNeutral font-bold'>Password</FormLabel>
+                    <FormLabel className='text-sm sm:text-base text-DarkNeutral font-bold'>Password</FormLabel>
                     <FormControl>
-                      <Input  className='text-DarkNeutral' placeholder="Enter your password..." type='password' {...field} />
+                      <Input className='text-sm sm:text-base text-DarkNeutral' placeholder="Enter your password..." type='password' {...field} />
                     </FormControl>
-                    <FormMessage className='text-Red700'/>
+                    <FormMessage className='text-xs sm:text-sm text-Red700'/>
                   </FormItem>
                 )}
               />
@@ -122,20 +122,21 @@ export default function SignUpPage() {
                 name="confirmPassword"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className=' text-DarkNeutral font-bold'>confirm Password</FormLabel>
+                    <FormLabel className='text-sm sm:text-base text-DarkNeutral font-bold'>confirm Password</FormLabel>
                     <FormControl>
-                      <Input  className='text-DarkNeutral' placeholder="confirm your password..." type='password' {...field} />
+                      <Input className='text-sm sm:text-base text-DarkNeutral' placeholder="confirm your password..." type='password' {...field} />
                     </FormControl>
-                    <FormMessage className='text-Red700'/>
+                    <FormMessage className='text-xs sm:text-sm text-Red700'/>
                   </FormItem>
                 )}
               />
-              <br />
-              <Button disabled={loading} className='w-full'>{loading ? <span className="loading loading-infinity loading-md"></span> :`Sign Up`}</Button>
+              <Button disabled={loading} className='w-full text-sm sm:text-base'>
+                {loading ? <span className="loading loading-infinity loading-md"></span> : 'Sign Up'}
+              </Button>
               <OrAuthGoogle/>
               <GoogleAuthBtn/>
-              <p className='text-xs lg:text-sm text-brand_primary/50 font-semibold py-2'>
-                IF YOU HAVE AN ACCOUNT <Link href='/login' className=' text-brand_primary font-extrabold hover:underline'>LOGIN</Link>
+              <p className='text-xs sm:text-sm text-center text-brand_primary/50 font-semibold py-2'>
+                IF YOU HAVE AN ACCOUNT <Link href='/login' className='text-brand_primary font-extrabold hover:underline'>LOGIN</Link>
               </p>
             </form>
           </Form>

@@ -8,29 +8,47 @@ interface SectionProps{
     sectionId?:string
     className?:string
     children: React.ReactNode,
+    threshold?: number
+    delay?: number
+    initialY?: number
 }
-export default function Section({sectionId,children,className}:SectionProps) {
+export default function Section({sectionId,children,className,threshold = 0.2, delay = 0.2, initialY = 50}:SectionProps) {
     const controls = useAnimation();
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.3,
-      })
-      useEffect(() => {
+        threshold,
+    });
+
+    useEffect(() => {
         if (inView) {
-            controls.start({ y:0,opacity: 1 });
+            controls.start({ y: 0, opacity: 1 });
         } else {
-            controls.start({y:90, opacity: 0 });
+            controls.start({ y: initialY, opacity: 0 });
         }
-    }, [controls, inView]);
-  return (
-    <motion.section
-    ref={ref}
-    animate={controls}
-    transition={{ease:"linear",delay:0.2}}
-     id={sectionId} 
-     className={cn("lg:py-32 py-10",className)}
-     >
-        {children}
-     </motion.section>
-  )
+    }, [controls, inView, initialY]);
+
+    return (
+        <motion.section
+            ref={ref}
+            initial={{ y: initialY, opacity: 0 }}
+            animate={controls}
+            transition={{
+                ease: "easeOut",
+                delay,
+                // duration: 0.5,
+                ...(typeof window !== 'undefined' && window.innerWidth < 768 
+                    ? { duration: 0.3 } 
+                    : { duration: 0.5 })
+            }}
+            id={sectionId}
+            className={cn(
+                "w-full",
+                "px-4 sm:px-6 md:px-8",
+                "py-8 sm:py-12 md:py-16 lg:py-24",
+                className
+            )}
+        >
+            {children}
+        </motion.section>
+    )
 }
