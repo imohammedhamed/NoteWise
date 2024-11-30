@@ -74,7 +74,7 @@ export default function SignUpPage() {
     <Section sectionId="login">
         <MaxWContainer className='flex justify-center items-center px-4 sm:px-6 lg:px-8'>
           <GoBackBtn/>
-            <div className="relative w-full max-w-md p-4 sm:p-6 lg:p-8 rounded-xl bg-brand_primary/10 mx-auto my-8">
+            <div className="relative p-4 sm:p-6 lg:p-10 rounded-xl bg-brand_primary/10 w-full max-w-[30rem] mx-auto mt-4 sm:mt-6 lg:mt-10">
             <WelcomeBan Welcome_to="Sign Up"/>
             <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

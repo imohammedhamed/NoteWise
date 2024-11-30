@@ -5,7 +5,7 @@ interface WelcomeBanProps{
 }
 export default function WelcomeBan({Welcome_to}:WelcomeBanProps) {
   return (
-    <div className='w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10'>
+    <div className='w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 lg:p-8'>
       <Image 
         src={imgsrc} 
         alt="NoteWise Logo" 
