@@ -83,9 +83,9 @@ export default function SignUpPage() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className='text-sm sm:text-base text-DarkNeutral font-bold'>Name</FormLabel>
+                    <FormLabel className='text-brand_primary font-bold'>Name</FormLabel>
                     <FormControl>
-                      <Input className='text-sm sm:text-base text-DarkNeutral' placeholder="Enter your name..." type='text' {...field} />
+                      <Input placeholder="Enter your name..." type='text' {...field} />
                     </FormControl>
                     <FormMessage className='text-xs sm:text-sm text-Red700'/>
                   </FormItem>
@@ -96,9 +96,9 @@ export default function SignUpPage() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className='text-sm sm:text-base text-DarkNeutral font-bold'>Email</FormLabel>
+                    <FormLabel className='text-brand_primary font-bold'>Email</FormLabel>
                     <FormControl>
-                      <Input className='text-sm sm:text-base text-DarkNeutral' placeholder="Enter your email..." type='email' {...field} />
+                      <Input placeholder="Enter your email..." type='email' {...field} />
                     </FormControl>
                     <FormMessage className='text-xs sm:text-sm text-Red700'/>
                   </FormItem>
@@ -109,9 +109,9 @@ export default function SignUpPage() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className='text-sm sm:text-base text-DarkNeutral font-bold'>Password</FormLabel>
+                    <FormLabel className='text-brand_primary font-bold'>Password</FormLabel>
                     <FormControl>
-                      <Input className='text-sm sm:text-base text-DarkNeutral' placeholder="Enter your password..." type='password' {...field} />
+                      <Input placeholder="Enter your password..." type='password' {...field} />
                     </FormControl>
                     <FormMessage className='text-xs sm:text-sm text-Red700'/>
                   </FormItem>
@@ -122,9 +122,9 @@ export default function SignUpPage() {
                 name="confirmPassword"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className='text-sm sm:text-base text-DarkNeutral font-bold'>confirm Password</FormLabel>
+                    <FormLabel className='text-brand_primary font-bold'>confirm Password</FormLabel>
                     <FormControl>
-                      <Input className='text-sm sm:text-base text-DarkNeutral' placeholder="confirm your password..." type='password' {...field} />
+                      <Input placeholder="confirm your password..." type='password' {...field} />
                     </FormControl>
                     <FormMessage className='text-xs sm:text-sm text-Red700'/>
                   </FormItem>
